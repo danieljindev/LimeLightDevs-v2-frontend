@@ -7,7 +7,7 @@
       </div>
       <nav class="hidden lg:block">
         <ul class="flex space-x-12 items-center">
-          <!-- Change text colors once color theme is added !-->
+          <!-- Change text colors once color theme is added -->
           <li><a class="font-bold">Services</a></li>
           <li><a class="font-bold">Packages</a></li>
           <li><a class="font-bold">Works</a></li>
@@ -21,13 +21,47 @@
           </li>
         </ul>
       </nav>
-      <!-- Add hamburger nav menu for mobile width -->
       <nav class="lg:hidden">
-        <!-- Add background dim overlay -->
-        <div class="absolute"></div>
-        <div></div>
+        <!-- Drawer bg overlay -->
         <div
-          class="hamburger-menu"
+          class="absolute bg-black inset-0 transition-all ease-in-out duration-500 opacity-0 h-screen w-screen z-20"
+          :class="{ 'opacity-50': isHamburgerActive }"
+        ></div>
+        <!-- Navigation drawer -->
+        <aside
+          :class="isHamburgerActive ? 'translate-x-0' : 'translate-x-full'"
+          class="transform top-0 bottom-0 right-0 w-8/12 md:w-5/12 bg-white fixed h-screen overflow-auto ease-in-out transition-all duration-300 z-30"
+        >
+          <ul
+            class="flex flex-col h-full items-center justify-center align-center"
+          >
+            <li class="my-3">
+              <a href="#" class="text-lg font-bold transition duration-300">
+                Services
+              </a>
+            </li>
+            <li class="my-3">
+              <a href="#" class="text-lg font-bold transition duration-300">
+                Packages
+              </a>
+            </li>
+            <li class="my-3">
+              <a href="#" class="text-lg font-bold transition duration-300">
+                Works
+              </a>
+            </li>
+            <li class="my-3">
+              <button
+                class="px-5 py-1 text-lg font-bold rounded-full focus:outline-none bg-green-400"
+              >
+                Contact Us
+              </button>
+            </li>
+          </ul>
+        </aside>
+        <!-- Hamburger menu -->
+        <div
+          class="hamburger-menu relative z-40"
           :class="{ 'is-active': isHamburgerActive }"
           @click.prevent="toggleMenu"
         >
@@ -54,11 +88,11 @@ export default {
 <style>
 /* Hamburger menu styling */
 .hamburger-menu .hamburger-line {
-  width: 40px;
+  width: 30px;
   height: 4px;
   background-color: #222222;
   display: block;
-  margin: 8px auto;
+  margin: 6px auto;
   -webkit-transition: all 0.3s ease-in-out;
   -o-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
@@ -73,16 +107,16 @@ export default {
 }
 
 .hamburger-menu.is-active .hamburger-line:nth-child(1) {
-  -webkit-transform: translateY(12px) rotate(45deg);
-  -ms-transform: translateY(12px) rotate(45deg);
-  -o-transform: translateY(12px) rotate(45deg);
-  transform: translateY(12px) rotate(45deg);
+  -webkit-transform: translateY(10px) rotate(45deg);
+  -ms-transform: translateY(10px) rotate(45deg);
+  -o-transform: translateY(10px) rotate(45deg);
+  transform: translateY(10px) rotate(45deg);
 }
 
 .hamburger-menu.is-active .hamburger-line:nth-child(3) {
-  -webkit-transform: translateY(-12px) rotate(-45deg);
-  -ms-transform: translateY(-12px) rotate(-45deg);
-  -o-transform: translateY(-12px) rotate(-45deg);
-  transform: translateY(-12px) rotate(-45deg);
+  -webkit-transform: translateY(-10px) rotate(-45deg);
+  -ms-transform: translateY(-10px) rotate(-45deg);
+  -o-transform: translateY(-10px) rotate(-45deg);
+  transform: translateY(-10px) rotate(-45deg);
 }
 </style>
