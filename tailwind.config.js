@@ -23,6 +23,9 @@ module.exports = {
         // secondary
         'app-gray-2': '#222222',
       },
+      fontFamily: {
+        hibana: ['Hibana', 'Roboto', 'sans-serif'],
+      },
     },
   },
   variants: {},
