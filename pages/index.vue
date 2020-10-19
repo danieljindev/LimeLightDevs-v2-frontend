@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <!--div class="container">
     <div>
       <Logo />
       <h1 class="title text-2xl">{{ name }}</h1>
@@ -22,7 +22,8 @@
         </a>
       </div>
     </div>
-  </div>
+  </div-->
+  <Contact />
 </template>
 
 <script>
