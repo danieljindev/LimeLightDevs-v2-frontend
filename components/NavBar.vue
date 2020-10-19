@@ -1,22 +1,44 @@
 <template>
-  <div class="mx-24 py-8">
+  <div class="container mx-auto py-8">
     <div class="flex items-center justify-between">
-      <div class="font-bold text-4xl">
-        <!-- Logo should replace this text -->
-        Limelight
+      <div class="flex items-end">
+        <p class="font-bold text-4xl text-app-green-1">
+          <!-- Logo should replace this text -->
+          Lime
+        </p>
+        <p class="text-4xl text-app-green-1">light</p>
+        <p class="pl-3 text-app-green-1 opacity-75">devs</p>
       </div>
       <nav class="hidden lg:block">
         <ul class="flex space-x-12 items-center">
           <!-- Change text colors once color theme is added -->
-          <li><a class="font-bold">Services</a></li>
-          <li><a class="font-bold">Packages</a></li>
-          <li><a class="font-bold">Works</a></li>
+          <li>
+            <a
+              href="#"
+              class="font-bold hover:text-app-green-1 transition-all ease-in-out duration-200"
+              >Services</a
+            >
+          </li>
+          <li>
+            <a
+              href="#"
+              class="font-bold hover:text-app-green-1 transition-all ease-in-out duration-200"
+              >Packages</a
+            >
+          </li>
+          <li>
+            <a
+              href="#"
+              class="font-bold hover:text-app-green-1 transition-all ease-in-out duration-200"
+              >Works</a
+            >
+          </li>
           <li>
             <!-- Button colors should be modified once color theme is added -->
             <button
-              class="px-5 py-1 rounded-full font-bold bg-green-400 focus:outline-none"
+              class="px-5 py-1 rounded-full font-bold text-app-gray-1 bg-app-green-1 hover:text-app-green-1 hover:bg-app-gray-1 border border-app-green-1 transition-all ease-in-out duration-200 focus:outline-none"
             >
-              Contact Us
+              <a href="#">Contact Us</a>
             </button>
           </li>
         </ul>
