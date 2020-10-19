@@ -29,14 +29,19 @@
       </ul>
     </aside>
     <!-- Hamburger menu -->
-    <div
-      class="hamburger-menu relative z-40"
-      :class="{ 'is-active': isHamburgerActive }"
-      @click.prevent="toggleMenu"
-    >
-      <span class="hamburger-line"></span>
-      <span class="hamburger-line"></span>
-      <span class="hamburger-line"></span>
+    <div class="relative z-40 cursor-pointer" @click.prevent="toggleMenu">
+      <span
+        class="block bg-white w-6 h-1 my-1 mx-auto transition-all ease-in-out duration-300"
+        :class="{ 'transform translate-y-2 rotate-45': isHamburgerActive }"
+      ></span>
+      <span
+        class="block bg-white w-6 h-1 my-1 mx-auto ease-in-out duration-300"
+        :class="{ 'opacity-0': isHamburgerActive }"
+      ></span>
+      <span
+        class="block bg-white w-6 h-1 my-1 mx-auto ease-in-out duration-300"
+        :class="{ 'transform -translate-y-2 -rotate-45': isHamburgerActive }"
+      ></span>
     </div>
   </nav>
 </template>
@@ -78,38 +83,4 @@ export default {
   },
 }
 </script>
-<style>
-/* Hamburger menu styling */
-.hamburger-menu .hamburger-line {
-  width: 30px;
-  height: 4px;
-  background-color: #ffffff;
-  display: block;
-  margin: 6px auto;
-  -webkit-transition: all 0.3s ease-in-out;
-  -o-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
-}
-
-.hamburger-menu:hover {
-  cursor: pointer;
-}
-
-.hamburger-menu.is-active .hamburger-line:nth-child(2) {
-  opacity: 0;
-}
-
-.hamburger-menu.is-active .hamburger-line:nth-child(1) {
-  -webkit-transform: translateY(10px) rotate(45deg);
-  -ms-transform: translateY(10px) rotate(45deg);
-  -o-transform: translateY(10px) rotate(45deg);
-  transform: translateY(10px) rotate(45deg);
-}
-
-.hamburger-menu.is-active .hamburger-line:nth-child(3) {
-  -webkit-transform: translateY(-10px) rotate(-45deg);
-  -ms-transform: translateY(-10px) rotate(-45deg);
-  -o-transform: translateY(-10px) rotate(-45deg);
-  transform: translateY(-10px) rotate(-45deg);
-}
-</style>
+<style></style>
