@@ -1,8 +1,15 @@
 <template>
   <div class="min-h-screen text-white bg-app-gray-1">
-    <!--Icon class="w-64 mx-auto" name="DottedLine" />
-    <h1 class="text-8xl font-hibana">Welcome!</h1-->
+    <Icon class="w-64 mx-auto" name="DottedLine" />
+    <h1 class="text-8xl font-hibana">Welcome!</h1>
     <Nuxt />
+
+    <Contact />
+    <!-- blob background (found in Contact) -->
+    <div class="relative mt-auto">
+      <img draggable=false class="absolute bottom-0 right-0 select-none" src="../static/contact/blackblob.png">
+      <img draggable=false class="absolute bottom-0 left-0 select-none" src="../static/contact/greenblob.png">
+    </div>
   </div>
 </template>
 

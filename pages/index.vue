@@ -1,4 +1,5 @@
 <template>
+  <div></div>
   <!--div class="container">
     <div>
       <Logo />
@@ -23,7 +24,6 @@
       </div>
     </div>
   </div-->
-  <Contact />
 </template>
 
 <script>
