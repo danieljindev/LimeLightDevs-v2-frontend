@@ -7,14 +7,14 @@
       </div>
       <div class="relative rounded-3xl bg-app-gray-2 flex flex-col-reverse lg:flex-row justify-center lg:justify-end items-center">
         <div class="relative lg:absolute lg:left-0 w-full h-full rounded-3xl flex items-end justify-center lg:justify-start select-none">
-          <img 
-            draggable=false 
-            class="hidden lg:block lg:absolute lg:left-0 object-cover z-10 w-1/3 h-full rounded-2xl" 
+          <img
+            draggable=false
+            class="hidden lg:block lg:absolute lg:left-0 object-cover z-10 w-1/3 h-full rounded-2xl"
             src="../static/contact/bunchofleaves.png"
           >
-          <img 
-            draggable=false 
-            class="lg:pl-6 lg:pt-6 object-contain z-20 w-1/2 lg:w-1/4 max-h-full" 
+          <img
+            draggable=false
+            class="lg:pl-6 lg:pt-6 object-contain z-20 w-1/2 lg:w-1/4 max-h-full"
             src="../static/contact/unboggled.png"
           >
         </div>
@@ -30,10 +30,10 @@
             </div>
             <div class="flex flex-col w-full lg:w-1/2 lg:pl-4">
               <label class="text-xl font-bold mb-2">Reason:</label>
-              <input 
+              <input
                 class="bg-app-gray-1 p-4 text-xl rounded-xl text-app-gray-3 placeholder-app-gray-3 font-bold outline-none border-2 border-transparent focus:border-app-green-1" 
-                v-model="reason" 
-                placeholder="Write your reason" 
+                v-model="reason"
+                placeholder="Write your reason"
               />
             </div>
           </div>
@@ -41,13 +41,13 @@
             <label class="text-xl mb-2">Write your message:</label>
             <textarea
               class="bg-app-gray-1 p-4 text-xl rounded-xl text-app-gray-3 placeholder-app-gray-3 font-bold resize-none outline-none border-2 border-transparent focus:border-app-green-1" 
-              v-model="message" 
+              v-model="message"
               rows=6
-              placeholder="Write your message" 
+              placeholder="Write your message"
             />
           </div>
           <div class="m-6 flex justify-center">
-            <button 
+            <button
               type="submit"
               class="px-12 py-2 font-bold text-2xl text-app-green-1 border-4 border-app-green-1 rounded-full focus:outline-none"
             >
