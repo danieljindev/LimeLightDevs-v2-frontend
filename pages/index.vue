@@ -1,14 +1,9 @@
-<template><div></div></template>
+<template>
+  <div></div>
+</template>
 
 <script>
-export default {
-  setup() {
-    const name = 'Limelight Devs'
-    return { name }
-  },
-}
+export default {}
 </script>
 
-<style>
-
-</style>
+<style></style>
