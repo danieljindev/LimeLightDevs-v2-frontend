@@ -4,6 +4,7 @@
     <Icon class="w-64 mx-auto" name="DottedLine" />
     <h1 class="text-5xl lg:text-8xl font-hibana">Welcome!</h1>
     <Nuxt />
+    <Footer />
   </div>
 </template>
 
