@@ -18,13 +18,13 @@
             src="../static/contact/unboggled.png"
           >
         </div>
-        <form class="z-30 flex w-full lg:w-2/3 flex-col justify-center pt-8 pb-0 lg:pb-8" @submit="submit">
+        <form class="z-30 flex w-full lg:w-2/3 flex-col justify-center pt-8 pb-0 lg:pb-8" @submit.prevent="submit">
           <div class="w-full flex flex-wrap flex-row justify-start items-center px-8">
             <div class="flex flex-col pb-4 lg:pb-0 w-full lg:w-1/2 lg:pr-4">
               <label class="text-xl mb-2">Name & Last Name</label>
               <input
                 class="bg-app-gray-1 p-4 text-xl rounded-xl text-app-gray-3 placeholder-app-gray-3 font-bold outline-none border-2 border-transparent focus:border-app-green-1" 
-                v-model="fullname"
+                v-model="form.fullname"
                 placeholder="Write your first & last name here"
               />
             </div>
@@ -32,7 +32,7 @@
               <label class="text-xl font-bold mb-2">Reason:</label>
               <input
                 class="bg-app-gray-1 p-4 text-xl rounded-xl text-app-gray-3 placeholder-app-gray-3 font-bold outline-none border-2 border-transparent focus:border-app-green-1" 
-                v-model="reason"
+                v-model="form.reason"
                 placeholder="Write your reason"
               />
             </div>
@@ -41,7 +41,7 @@
             <label class="text-xl mb-2">Write your message:</label>
             <textarea
               class="bg-app-gray-1 p-4 text-xl rounded-xl text-app-gray-3 placeholder-app-gray-3 font-bold resize-none outline-none border-2 border-transparent focus:border-app-green-1" 
-              v-model="message"
+              v-model="form.message"
               rows=6
               placeholder="Write your message"
             />
@@ -61,21 +61,23 @@
 </template>
 
 <script>
+import { reactive, ref } from "vue";
 
 export default {
   setup() {
-    let fullname = ""
-    let reason = ""
-    let message = ""
+    const form = ref({
+      fullname: "",
+      reason: "",
+      message: "",
+    })
 
     function submit(e) {
-      e.preventDefault()
       for (let i = 0; i < e.target.length; i++) {
         console.log(e.target[i].placeholder, e.target[i].value)
       }
     }
     
-    return { fullname, reason, message, submit }
+    return { form, submit }
   },
 }
 </script>
