@@ -1,5 +1,5 @@
 <template>
-  <div class="container mx-auto py-8 px-4 md:px-0">
+  <div class="container mx-auto py-8 px-4 xl:px-0">
     <div class="flex items-center justify-between">
       <NavLogo />
       <NavDesktop :nav-links="navLinks" />

@@ -2,7 +2,7 @@
   <div class="min-h-screen text-white bg-app-gray-1">
     <NavBar />
     <Icon class="w-64 mx-auto" name="DottedLine" />
-    <h1 class="text-8xl font-hibana!">Welcome!</h1>
+    <h1 class="text-5xl lg:text-8xl font-hibana!">Welcome!</h1>
     <Nuxt />
   </div>
 </template>
