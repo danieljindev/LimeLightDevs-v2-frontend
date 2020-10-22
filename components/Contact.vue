@@ -1,21 +1,21 @@
 <template>
   <div class="w-full flex justify-center">
-    <div class="relative mx-auto my-16 w-11/12 z-20">
+    <div class="relative mx-auto my-16 w-11/12 z-10">
       <div class="relative font-bold z-30 text-6xl mb-10 text-center lg:text-left">Get in touch</div>
       <div class="absolute top-0 w-full flex justify-center">
-      <img draggable=false class="transform -translate-y-24 sm:-translate-y-40 translate-x-0 lg:translate-x-48" src="../static/contact/leaves.png">
+      <img draggable=false class="transform -translate-y-24 sm:-translate-y-40 translate-x-0 lg:translate-x-48" src="/contact/leaves.png">
       </div>
       <div class="relative rounded-3xl bg-app-gray-2 flex flex-col-reverse lg:flex-row justify-center lg:justify-end items-center">
         <div class="relative lg:absolute lg:left-0 w-full h-full rounded-3xl flex items-end justify-center lg:justify-start select-none">
           <img
             draggable=false
             class="hidden lg:block lg:absolute lg:left-0 object-cover z-10 w-1/3 h-full rounded-2xl"
-            src="../static/contact/bunchofleaves.png"
+            src="/contact/bunchofleaves.png"
           >
           <img
             draggable=false
             class="lg:pl-6 lg:pt-6 object-contain z-20 w-1/2 lg:w-1/4 max-h-full"
-            src="../static/contact/unboggled.png"
+            src="/contact/unboggled.png"
           >
         </div>
         <form class="z-30 flex w-full lg:w-2/3 flex-col justify-center pt-8 pb-0 lg:pb-8" @submit.prevent="submit">
@@ -61,20 +61,21 @@
 </template>
 
 <script>
-import { reactive, ref } from "vue";
+import { reactive } from "@nuxtjs/composition-api";
 
 export default {
   setup() {
-    const form = ref({
+    const form = reactive({
       fullname: "",
       reason: "",
       message: "",
-    })
+    });
 
     function submit(e) {
-      for (let i = 0; i < e.target.length; i++) {
-        console.log(e.target[i].placeholder, e.target[i].value)
-      }
+      console.log(form.fullname, form.reason, form.message);
+
+      // clear form values (tried using e.target.reset(), but it doesn't update reactive form values)
+      Object.keys(form).forEach((key, value) => form[key] = "");
     }
     
     return { form, submit }
