@@ -10,7 +10,9 @@
         Check our Packages
       </a>
     </div>
+    
     <ServiceSlide />
+
     <div id="services" class="py-40 w-full flex flex-col items-center overflow-hidden">
       <ServiceItem v-for="serviceItem in serviceItems" 
         :key=serviceItem.title
@@ -20,9 +22,6 @@
         :imageLeftSide=serviceItem.imageLeftSide
       />
     </div>
-
-    <!-- scrolling bar thingy -->
-    <!-- items -->
   </div>
 </template>
 

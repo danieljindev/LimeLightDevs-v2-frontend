@@ -5,7 +5,7 @@
     draggable=false
   >
     <span
-      @click="changeIndex"
+      @click.stop="changeIndex"
       class="w-auto px-6 h-24 cursor-pointer flex items-center justify-center
              bg-transparent hover:bg-opacity-75 hover:bg-app-gray-1 transition duration-200 ease-in-out"
     >

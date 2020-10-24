@@ -1,5 +1,5 @@
 <template>
-  <div class="relative w-full h-96 bg-app-gray-2">
+  <div class="relative w-full h-96 bg-app-gray-2 smoothScroll">
     <!-- it'd be nice if the images moved left/right when the index changes, but thats kay -->
     <ServiceSlideItem v-for="(serviceSlide, index) in serviceSlides" 
       :key=serviceSlide.name
@@ -7,14 +7,16 @@
       :index=index
       :currentIndex=currentIndex
     />
-    <div class="w-full flex justify-center absolute top-0 mt-6">
+    <div 
+      class="w-full flex justify-center absolute top-0 mt-6"
+    >
       <button
         v-for="(serviceSlide, index) in serviceSlides"
         :key=index
         class="rounded-full w-3 h-3 focus:outline-none mx-2 hover:bg-white transition duration-500"
         :class="currentIndex === index ? 'bg-white' : 'border-2 border-white'"
         @click="changeIndex(index-currentIndex)"
-      />  
+      />
     </div>
 
     <ServiceSlideButton direction="left" @changeIndex="changeIndex" />
@@ -47,6 +49,8 @@ export default {
     ];
     const currentIndex = ref(0);
 
+    // this adds the given value to the currentIndex value, it doesn't set the currentIndex to the currentIndex. 
+    // name might be misleading to some, not sure
     function changeIndex(value) {
       currentIndex.value += value;
       if (currentIndex.value >= serviceSlides.length) {
