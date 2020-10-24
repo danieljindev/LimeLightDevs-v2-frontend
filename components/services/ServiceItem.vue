@@ -1,13 +1,29 @@
 <template>
-  <div class="w-11/12 h-128 bg-blue-400 mb-32 flex rounded-2xl shadow-xl" :class="imageLeftSide ? 'flex-row' : 'flex-row-reverse'">
-    <!--img :src=imageUrl class="w-1/3 object-contain transform scale-150" :class="imageLeftSide ? 'origin-left' : 'origin-right'"-->
-    <img :src=imageUrl class="w-full object-contain transform scale-150">
-    <div class="w-full flex flex-col m-16">
-      <span class="text-7xl tracking-wide font-bold w-full" :class=textAlignStyle>
-        {{ title }}
-      </span>
-      <div class="w-full h-full flex items-center">
-        <p class="text-3xl" :class=textAlignStyle>{{ description }}</p>
+  <div class="relative w-full flex justify-center">
+    <img
+      src="/contact/leaves.png"
+      class="absolute z-0 w-64 lg:w-auto select-none transform -translate-y-24 lg:-translate-y-64 lg:scale-90"
+      :class="imageLeftSide ? 'translate-x-1/2 rotate-12' : '-translate-x-1/2 -rotate-12'"
+      draggable=false
+    />
+    <div
+      class="z-10 w-11/12 h-auto lg:h-128 bg-app-gray-2 rounded-2xl shadow-2xl mb-40 flex flex-col items-center" 
+      :class="imageLeftSide ? 'lg:flex-row' : 'lg:flex-row-reverse'"
+    >
+      <img 
+        :src=imageUrl
+        class="w-1/2 lg:w-1/2 lg:max-h-full object-contain select-none 
+               transform origin-bottom md:origin-center scale-125 lg:scale-150" 
+        draggable=false
+      >
+      <div class="relative z-20 w-full lg:w-1/2 flex flex-col my-12 text-center" :class=textAlignStyle>
+        <span class="text-6xl mb-3 tracking-wide font-bold w-full">
+          {{ title }}
+        </span>
+        <p 
+          class="text-2xl" 
+          :class="imageLeftSide ? 'lg:pr-16' : 'lg:pl-16'">{{ description }}
+        </p>
       </div>
     </div>
   </div>
@@ -24,7 +40,7 @@ export default {
   },
   setup(props) {
     console.log(props.title, props.imageLeftSide, props.imageUrl);
-    const textAlignStyle = props.imageLeftSide ? "text-left" : "text-right"
+    const textAlignStyle = props.imageLeftSide ? "lg:text-left" : "lg:text-right"
 
     return { textAlignStyle }
   }
