@@ -1,5 +1,6 @@
 <template>
   <div class="relative w-full h-96 bg-app-gray-2">
+    <!-- it'd be nice if the images moved left/right when the index changes, but thats kay -->
     <ServiceSlideItem v-for="(serviceSlide, index) in serviceSlides" 
       :key=serviceSlide.name
       :serviceSlide=serviceSlide
@@ -10,14 +11,14 @@
       <button
         v-for="(serviceSlide, index) in serviceSlides"
         :key=index
-        class="rounded-full w-3 h-3 focus:outline-none mx-2 transition duration-500"
+        class="rounded-full w-3 h-3 focus:outline-none mx-2 hover:bg-white transition duration-500"
         :class="currentIndex === index ? 'bg-white' : 'border-2 border-white'"
         @click="changeIndex(index-currentIndex)"
       />  
     </div>
 
-    <ServiceSlideButton direction="&lt;" @changeIndex="changeIndex" />
-    <ServiceSlideButton direction="&gt;" @changeIndex="changeIndex" />
+    <ServiceSlideButton direction="left" @changeIndex="changeIndex" />
+    <ServiceSlideButton direction="right" @changeIndex="changeIndex" />
   </div>
 </template>
 
