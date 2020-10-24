@@ -22,7 +22,6 @@ export default {
   },
   setup(props, { emit }) {
     function changeIndex() {
-      console.log(props.direction)
       let value;
       if (props.direction === 'left') {
         value = -1;
