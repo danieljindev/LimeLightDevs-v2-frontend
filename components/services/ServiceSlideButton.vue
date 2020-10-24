@@ -18,7 +18,7 @@
 <script>
 export default {
   props: {
-    direction: Number
+    direction: String
   },
   setup(props, { emit }) {
     function changeIndex() {
