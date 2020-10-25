@@ -21,8 +21,8 @@
           {{ title }}
         </span>
         <p 
-          class="text-2xl" 
-          :class="imageLeftSide ? 'px-8 lg:pr-16' : 'px-8 lg:pl-16'">{{ description }}
+          class="text-2xl px-8" 
+          :class="imageLeftSide ? 'lg:pl-0 lg:pr-16' : 'lg:pr-0 lg:pl-16'">{{ description }}
         </p>
       </div>
     </div>
