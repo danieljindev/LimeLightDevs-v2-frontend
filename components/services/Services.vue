@@ -10,10 +10,10 @@
         Check our Packages
       </a>
     </div>
-    
+
     <ServiceSlide />
 
-    <div id="services" class="py-40 w-full flex flex-col items-center overflow-hidden">
+    <div id="services" class="pt-40 w-full flex flex-col items-center overflow-hidden">
       <ServiceItem v-for="serviceItem in serviceItems" 
         :key=serviceItem.title
         :title=serviceItem.title 
