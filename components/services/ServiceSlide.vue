@@ -58,7 +58,6 @@ export default {
       } else if (currentIndex.value < 0) {
         currentIndex.value = serviceSlides.length - 1
       }
-      console.log(currentIndex.value)
     }
 
     return { serviceSlides, currentIndex, changeIndex };

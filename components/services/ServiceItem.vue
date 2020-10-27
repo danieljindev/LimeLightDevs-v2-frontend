@@ -39,7 +39,6 @@ export default {
     imageLeftSide: Boolean,
   },
   setup(props) {
-    console.log(props.title, props.imageLeftSide, props.imageUrl);
     const textAlignStyle = props.imageLeftSide ? "lg:text-left" : "lg:text-right"
 
     return { textAlignStyle }
