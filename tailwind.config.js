@@ -15,6 +15,10 @@ module.exports = {
   purge: [],
   theme: {
     extend: {
+      spacing: {
+        96: '24rem',
+        128: '32rem',
+      },
       colors: {
         // main
         'app-green-1': '#4dff64',

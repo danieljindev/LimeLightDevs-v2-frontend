@@ -14,7 +14,7 @@ export default {
     navLinks: {
       services: {
         name: 'Services',
-        href: '#services',
+        href: '/services',
       },
       packages: {
         name: 'Packages',
