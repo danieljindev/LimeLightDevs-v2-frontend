@@ -23,7 +23,7 @@ module.exports = {
         // secondary
         'app-gray-2': '#222222',
         // contact form text
-        'app-gray-3': '#606060'
+        'app-gray-3': '#606060',
       },
       fontFamily: {
         hibana: ['Hibana', 'Roboto', 'sans-serif'],
