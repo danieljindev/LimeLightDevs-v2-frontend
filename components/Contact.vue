@@ -1,8 +1,8 @@
 <template>
-  <div class="w-full flex justify-center">
+  <div id="contact" class="w-full flex justify-center">
     <div class="relative mx-auto my-16 w-11/12 z-10">
       <div
-        class="relative font-bold z-30 text-6xl mb-10 text-center lg:text-left"
+        class="relative font-bold z-20 text-6xl mb-10 text-center lg:text-left"
       >
         Get in touch
       </div>
