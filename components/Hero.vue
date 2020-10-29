@@ -1,7 +1,10 @@
 <template>
   <div class="w-full text-white flex justify-start">
+    <img src="hero/blob.png" class="absolute top-0 right-0 w-2/3 h-auto" />
+    <img src="hero/projects.png" class="absolute right-0 w-2/5 h-auto" />
+    <!-- honestly thinking of just creating a whole new image with all the images put on it, it seems to difficult to responsively style this -->
     <div
-      class="relative w-1/2 flex flex-col items-center lg:items-start lg:ml-56 mt-12 mb-48 text-center lg:text-left"
+      class="relative w-1/2 flex flex-col items-center lg:items-start lg:ml-56 my-64 text-center lg:text-left"
     >
       <span class="text-8xl font-hibana w-full mb-1">Welcome!</span>
       <span class="text-6xl font-hibana text-app-green-1 w-full mb-6">Limelight - Web Developing</span>
@@ -21,6 +24,5 @@
       <span class="text-app-gray-3 font-bold text-xl ml-6 transform -rotate-90 -translate-x-40 -translate-y-10">contact@limelight.com</span>
       </div>
     </div>
-<!-- text-app-gray-3-->
   </div>
 </template>
