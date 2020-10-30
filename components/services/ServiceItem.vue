@@ -54,4 +54,8 @@ export default {
     return { textAlignStyle }
   },
 }
+
 </script>
+
+</script>
+

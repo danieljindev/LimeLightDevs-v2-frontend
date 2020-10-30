@@ -3,9 +3,20 @@
     <NavBar />
     <div :style="`padding-bottom:${footerHeight}px`">
       <Nuxt />
+      <Packages/>
       <Contact />
       <!-- blob background (found in Contact) -->
       <div class="relative mt-auto">
+        <img
+          draggable="false"
+          class="absolute bottom-0 right-0 select-none"
+          src="/contact/blackblob.png"
+        />
+        <img
+          draggable="false"
+          class="absolute bottom-0 left-0 select-none"
+          src="/contact/greenblob.png"
+        />
         <img draggable=false class="absolute bottom-0 right-0 select-none" src="/contact/blackblob.png">
         <img draggable=false class="absolute bottom-0 left-0 select-none" src="/contact/greenblob.png">
       </div>
