@@ -1,10 +1,18 @@
 <template>
   <div class="relative h-96">
     <VueSlickCarousel
+      ref="carousel"
+      v-bind="settings"
+      @beforeChange="indexChange"
+    >
+      <div
+        v-for="serviceSlide in serviceSlides"
+        :key="serviceSlide.title"
+        class="relative h-96 focus:outline-none"
       v-bind="settings"
       ref="carousel"
       @beforeChange="indexChange"
-    >
+    > </div>
       <div
         class="relative h-96 focus:outline-none"
         v-for="serviceSlide in serviceSlides"
@@ -33,7 +41,6 @@
         @click="goToIndex(index)"
       />
     </div>
-
     <ServiceCarouselButton direction="prev" @change-index="changeIndex" />
     <ServiceCarouselButton direction="next" @change-index="changeIndex" />
   </div>
@@ -110,4 +117,8 @@ export default {
     }
   },
 }
+
 </script>
+
+</script>
+

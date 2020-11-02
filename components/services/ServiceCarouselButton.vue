@@ -5,8 +5,8 @@
     draggable="false"
   >
     <span
-      @click.stop="$emit('change-index', direction)"
       class="rounded-full w-12 h-12 bg-white bg-opacity-75 cursor-pointer flex items-center justify-center hover:bg-opacity-100 transition duration-200 ease-in-out"
+      @click.stop="$emit('change-index', direction)"
     >
       {{ symbol }}
     </span>
@@ -25,4 +25,7 @@ export default {
   },
 }
 </script>
+
+
+
 
