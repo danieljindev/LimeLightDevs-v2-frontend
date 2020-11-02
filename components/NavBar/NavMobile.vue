@@ -2,7 +2,7 @@
   <nav class="lg:hidden">
     <!-- Drawer bg overlay -->
     <div
-      class="absolute bg-black inset-0 transition-all ease-in-out duration-500 opacity-0 h-screen w-screen z-20"
+      class="absolute bg-black transition-all ease-in-out duration-500 opacity-0 h-screen z-20"
       :class="{ 'opacity-50': isHamburgerActive }"
     ></div>
     <!-- Navigation drawer -->

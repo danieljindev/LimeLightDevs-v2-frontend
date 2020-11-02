@@ -15,6 +15,10 @@ module.exports = {
   purge: [],
   theme: {
     extend: {
+      spacing: {
+        96: '24rem',
+        128: '32rem',
+      },
       colors: {
         // main
         'app-green-1': '#4dff64',
@@ -23,13 +27,23 @@ module.exports = {
         // secondary
         'app-gray-2': '#222222',
         // contact form text
-        'app-gray-3': '#606060'
+        'app-gray-3': '#606060',
       },
       fontFamily: {
         hibana: ['Hibana', 'Roboto', 'sans-serif'],
       },
     },
+    minWidth: {
+      0: '0%',
+      '1/2': '50%',
+      '3/4': '75%',
+    },
   },
-  variants: {},
+  variants: {
+    borderStyle: ['responsive', 'hover', 'focus'],
+    height: ['responsive', 'hover', 'focus'],
+    minWidth: ['responsive', 'hover', 'focus'],
+    backgroundColor: ['responsive', 'hover', 'focus'],
+  },
   plugins: [],
 }
