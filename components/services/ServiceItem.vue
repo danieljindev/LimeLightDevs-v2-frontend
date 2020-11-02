@@ -2,7 +2,7 @@
   <div class="relative w-full flex justify-center">
     <img
       src="/contact/leaves.png"
-      class="absolute z-0 w-64 lg:w-auto select-none transform -translate-y-24 lg:-translate-y-64 scale-125 lg:scale-90"
+      class="absolute z-0 w-64 lg:w-auto select-none transform -translate-y-24 lg:-translate-y-64 scale-110 lg:scale-90"
       :class="
         imageLeftSide
           ? 'translate-x-1/2 rotate-12'
@@ -16,7 +16,7 @@
     >
       <img
         :src="imageUrl"
-        class="w-5/12 lg:max-h-full object-contain select-none transform origin-bottom md:origin-center scale-125 lg:scale-150"
+        class="w-5/12 lg:max-h-full object-contain select-none transform origin-bottom md:origin-center scale-110 lg:scale-150"
         draggable="false"
       />
       <div
@@ -24,7 +24,7 @@
         :class="textAlignStyle"
       >
         <span 
-          class="text-4xl lg:text-6xl mb-3 tracking-wide font-bold w-full"
+          class="text-4xl mb-3 tracking-wide font-bold w-full"
           :class="imageLeftSide ? 'lg:pr-0 lg:pl-16' : 'lg:pl-0 lg:pr-16'"
         >
           {{ title }}

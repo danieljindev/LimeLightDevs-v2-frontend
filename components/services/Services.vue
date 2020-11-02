@@ -1,9 +1,9 @@
 <template>
   <div class="w-full z-20 relative">
     <div
-      class="text-white w-full lg:w-5/12 flex flex-col items-center lg:items-start lg:ml-48 mt-12 mb-32 lg:mb-48 text-center lg:text-left"
+      class="text-white w-full lg:w-5/12 flex flex-col items-center lg:items-start lg:ml-48 mt-12 mb-32 text-center lg:text-left"
     >
-      <span class="text-5xl md:text-6xl font-hibana">Services</span>
+      <span class="text-4xl md:text-5xl font-hibana">Services</span>
       <p class="text-lg px-8 lg:px-0 mt-2 mb-10 tracking-wide">
         Lorem ipsum dolor sit amet consectetur adipiscing elit, fames semper
         vehicula velit dapibus in iaculis. Eros cursus lobortis leo hendrerit
