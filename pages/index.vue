@@ -1,5 +1,6 @@
 <template>
   <div>
+    <Hero />
     <Packages/>
   </div>
 </template>
