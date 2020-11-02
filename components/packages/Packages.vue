@@ -1,55 +1,59 @@
 <template>
-<div class="flex justify-center w-11/12 m-auto mt-16 mb-40">
-  <div class="w-full text-center z-10">
-    <h3
-      class="text-4xl lg:text-6xl font-semibold mb-3 lg:mb-0 text-left tracking-wide"
-    >
-      Our Packages
-    </h3>
-    <ul
-      class="flex space-x-4 lg:flex text-sm list-none flex-no-wrap justify-end lg:space-x-24 mr-2 mb-3"
-    >
-      <li><a href="#"> extra</a></li>
-      <li><a href="#"> figma</a></li>
-      <li class="text-app-green-1 underline"><a href="#">e-commerce</a></li>
-      <li><a href="#">basic</a></li>
-    </ul>
+  <div class="flex justify-center w-11/12 m-auto mt-16 mb-40">
+    <div class="z-10 w-full text-center">
+      <h3
+        class="mb-3 text-4xl font-semibold tracking-wide text-left 2xl:text-5xl lg:mb-0"
+      >
+        Our Packages
+      </h3>
+      <ul
+        class="flex flex-no-wrap justify-end mb-3 mr-2 space-x-4 text-sm list-none lg:flex lg:space-x-24"
+      >
+        <li><a href="#"> extra</a></li>
+        <li><a href="#"> figma</a></li>
+        <li class="underline text-app-green-1"><a href="#">e-commerce</a></li>
+        <li><a href="#">basic</a></li>
+      </ul>
 
-    <div class="w-full lg:rounded-2xl lg:shadow-2xl overflow-x-auto">
-      <div class="w-full flex">
-        <div
-          v-for="(item, id) in Packages"
-          :key="id"
-          class="package px-6 py-4 flex lg:min-w-0 flex-col items-center rounded-3xl lg:rounded-none mx-2 lg:m-0 border-r-2 bg-app-gray-2 min-w-3/4 text-sm border-app-gray-1 shadow-2xl lg:shadow-none h-auto"
-        >
-          <img class="my-2 lg:my-4" :src="'/packages/' + item.img" alt="pack" />
-          <!-- <img src="/packages/Edit4.png" alt=""> -->
-          <h4 class="text-xl leading-none mb-2 font-medium">
-            {{ item.package }}
-          </h4>
-          <p class="mb-2 lg:mb-4 leading-4">{{ item.desc }}</p>
-          <p><span class="font-bold">3</span> App pages</p>
-          <p><span class="font-bold">5</span> Stock images</p>
-          <p><span class="font-bold">2</span> Design revision</p>
-          <p><span class="font-bold">1</span> Development revision</p>
-          <p>Unlimited Contact</p>
-          <p class="mt-2 lg:mt-4">
-            <span class="mr-2 text-sm line-through"
-              >${{ item.slashedPrice }}</span
-            >
-            <span class="text-app-green-1 text-xl font-medium"
-              >${{ item.price }}</span
-            >
-          </p>
-          <ButtonComponent />
-          <p class="mt-2">
-            Edit request? <span class="font-medium">contactus</span>
-          </p>
+      <div class="w-full overflow-x-auto lg:rounded-2xl lg:shadow-2xl">
+        <div class="flex w-full">
+          <div
+            v-for="(item, id) in Packages"
+            :key="id"
+            class="flex flex-col items-center h-auto px-6 py-4 mx-2 text-sm border-r-2 shadow-2xl package lg:min-w-0 rounded-3xl lg:rounded-none lg:m-0 bg-app-gray-2 min-w-3/4 border-app-gray-1 lg:shadow-none"
+          >
+            <img
+              class="my-2 lg:my-4"
+              :src="'/packages/' + item.img"
+              alt="pack"
+            />
+            <!-- <img src="/packages/Edit4.png" alt=""> -->
+            <h4 class="mb-2 text-xl font-medium leading-none">
+              {{ item.package }}
+            </h4>
+            <p class="mb-2 leading-4 lg:mb-4">{{ item.desc }}</p>
+            <p><span class="font-bold">3</span> App pages</p>
+            <p><span class="font-bold">5</span> Stock images</p>
+            <p><span class="font-bold">2</span> Design revision</p>
+            <p><span class="font-bold">1</span> Development revision</p>
+            <p>Unlimited Contact</p>
+            <p class="mt-2 lg:mt-4">
+              <span class="mr-2 text-sm line-through"
+                >${{ item.slashedPrice }}</span
+              >
+              <span class="text-xl font-medium text-app-green-1"
+                >${{ item.price }}</span
+              >
+            </p>
+            <ButtonComponent />
+            <p class="mt-2">
+              Edit request? <span class="font-medium">contactus</span>
+            </p>
+          </div>
         </div>
       </div>
     </div>
   </div>
- </div> 
 </template>
 
 <script>
