@@ -6,7 +6,7 @@
     <div
       class="relative lg:w-1/2 flex flex-col items-start lg:ml-56 my-24 lg:my-36 pl-8 lg:pl-0"
     >
-      <span class="text-5xl font-hibana mb-4 lg:mb-2">Welcome!</span>
+      <span class="text-6xl md:text-5xl font-hibana mb-4 lg:mb-2">Welcome!</span>
       <span class="text-3xl font-hibana text-app-green-1 mb-4 lg:mb-8">Limelight - Web Developing</span>
       <p class="text-md lg:text-lg w-5/6 mb-8">
         Lorem ipsum dolor sit amet consectetur adipiscing elit, fames semper
