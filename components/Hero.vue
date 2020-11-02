@@ -6,8 +6,8 @@
     <div
       class="relative lg:w-1/2 flex flex-col items-start lg:ml-56 my-24 lg:my-36 pl-8 lg:pl-0"
     >
-      <span class="text-4xl lg:text-5xl font-hibana mb-4 lg:mb-2">Welcome!</span>
-      <span class="text-2xl lg:text-3xl font-hibana text-app-green-1 mb-4 lg:mb-8">Limelight - Web Developing</span>
+      <span class="text-5xl font-hibana mb-4 lg:mb-2">Welcome!</span>
+      <span class="text-3xl font-hibana text-app-green-1 mb-4 lg:mb-8">Limelight - Web Developing</span>
       <p class="text-md lg:text-lg w-5/6 mb-8">
         Lorem ipsum dolor sit amet consectetur adipiscing elit, fames semper
         vehicula velit dapibus in iaculis. Eros cursus lobortis leo hendrerit
@@ -15,7 +15,7 @@
       </p>
       <a
         href="#contact"
-        class="px-5 md:px-8 py-2 tracking-wider font-bold text-xl text-app-green-1 border-2 border-app-green-1 rounded-full cursor-pointer focus:outline-none"
+        class="px-5 md:px-8 py-2 tracking-wider font-bold text-xl text-app-green-1 border-2 border-app-green-1 rounded-full cursor-pointer focus:outline-none hover:text-white hover:bg-app-green-1"
       >
         Contact Us
       </a>
