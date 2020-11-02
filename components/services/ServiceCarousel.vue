@@ -12,7 +12,7 @@
       v-bind="settings"
       ref="carousel"
       @beforeChange="indexChange"
-    >
+    > </div>
       <div
         class="relative h-96 focus:outline-none"
         v-for="serviceSlide in serviceSlides"

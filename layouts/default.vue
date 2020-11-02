@@ -3,7 +3,6 @@
     <NavBar />
     <div :style="`padding-bottom:${footerHeight}px`">
       <Nuxt />
-      <Packages/>
       <Contact />
       <!-- blob background (found in Contact) -->
       <div class="relative mt-auto">
