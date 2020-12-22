@@ -16,16 +16,16 @@
 <script>
 export default {
   props: {
-    direction: String,
+    direction: {
+      type: String,
+      required: true
+    },
   },
   setup(props) {
+    // probably want to use proper icons
     const symbol = props.direction === 'prev' ? '<' : '>'
 
     return { symbol }
   },
 }
 </script>
-
-
-
-

@@ -42,12 +42,23 @@
 
 <script>
 export default {
-  // todo: maybe trim the padding on the images so they scale better, disable ghost dragging
   props: {
-    title: String,
-    description: String,
-    imageUrl: String,
-    imageLeftSide: Boolean,
+    title: {
+      type: String,
+      required: true
+    },
+    description: {
+      type: String,
+      required: true
+    },
+    imageUrl: {
+      type: String,
+      required: true
+    },
+    imageLeftSide: {
+      type: Boolean,
+      required: true
+    },
   },
   setup(props) {
     const textAlignStyle = props.imageLeftSide
@@ -59,6 +70,3 @@ export default {
 }
 
 </script>
-
-</script>
-

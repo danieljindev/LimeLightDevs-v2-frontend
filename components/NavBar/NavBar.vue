@@ -18,11 +18,11 @@ export default {
       },
       packages: {
         name: 'Packages',
-        href: '#packages',
+        href: '/', // packages are located on home page
       },
       works: {
         name: 'Works',
-        href: '#works',
+        href: '/works',
       },
       contactus: {
         name: 'Contact Us',

@@ -26,12 +26,8 @@
         :key="serviceItem.title"
         :title="serviceItem.title"
         :description="serviceItem.description"
-
         :image-url="serviceItem.imageUrl"
         :image-left-side="serviceItem.imageLeftSide"
-        :imageUrl="serviceItem.imageUrl"
-        :imageLeftSide="serviceItem.imageLeftSide"
-
       />
     </div>
   </div>
@@ -44,7 +40,6 @@ import VueSlickCarousel from 'vue-slick-carousel'
 import 'vue-slick-carousel/dist/vue-slick-carousel-theme.css'
 
 export default {
-  components: { VueSlickCarousel },
   setup() {
     // wasn't sure if there we gonna be more of the service items eventually added, but implemented so there could be more anyways
     const serviceItems = [
@@ -67,8 +62,4 @@ export default {
     return { serviceItems }
   },
 }
-
 </script>
-
-</script>
-

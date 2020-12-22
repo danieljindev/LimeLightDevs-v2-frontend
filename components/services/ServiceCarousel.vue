@@ -9,14 +9,6 @@
         v-for="serviceSlide in serviceSlides"
         :key="serviceSlide.title"
         class="relative h-96 focus:outline-none"
-      v-bind="settings"
-      ref="carousel"
-      @beforeChange="indexChange"
-    > </div>
-      <div
-        class="relative h-96 focus:outline-none"
-        v-for="serviceSlide in serviceSlides"
-        :key="serviceSlide.title"
       >
         <img
           :src="serviceSlide.imageUrl"
@@ -80,6 +72,7 @@ export default {
     const currentIndex = ref(0)
 
     function indexChange(oldIndex, newIndex) {
+      console.log(oldIndex, newIndex)
       currentIndex.value = newIndex
     }
 
@@ -117,8 +110,4 @@ export default {
     }
   },
 }
-
 </script>
-
-</script>
-
