@@ -6,10 +6,14 @@
 <script>
 import Caret from './icons/Caret'
 import DottedLine from './icons/DottedLine'
+import RightArrow from './icons/RightArrow'
+import LeftArrow from './icons/LeftArrow'
 export default {
   components: {
     Caret,
     DottedLine,
+    RightArrow,
+    LeftArrow,
   },
   props: {
     name: {

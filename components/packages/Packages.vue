@@ -7,7 +7,7 @@
         Our Packages
       </h3>
       <ul
-        class="flex flex-no-wrap justify-end mb-3 mr-2 space-x-4 text-sm list-none lg:flex lg:space-x-24"
+        class="flex flex-no-wrap justify-end font-bold mb-3 mr-2 space-x-4 text-md lg:space-x-12"
       >
         <li><a href="#"> extra</a></li>
         <li><a href="#"> figma</a></li>
@@ -18,7 +18,7 @@
       <div class="w-full overflow-x-auto lg:rounded-2xl lg:shadow-2xl">
         <div class="flex w-full">
           <div
-            v-for="(item, id) in Packages"
+            v-for="(item, id) in packages"
             :key="id"
             class="flex flex-col items-center h-auto px-6 py-4 mx-2 text-sm border-r-2 shadow-2xl package lg:min-w-0 rounded-3xl lg:rounded-none lg:m-0 bg-app-gray-2 min-w-3/4 border-app-gray-1 lg:shadow-none"
           >
@@ -37,17 +37,20 @@
             <p><span class="font-bold">2</span> Design revision</p>
             <p><span class="font-bold">1</span> Development revision</p>
             <p>Unlimited Contact</p>
-            <p class="mt-2 lg:mt-4">
+            <p class="mt-2 lg:mt-3">
               <span class="mr-2 text-sm line-through"
                 >${{ item.slashedPrice }}</span
               >
-              <span class="text-xl font-medium text-app-green-1"
+              <span class="text-xl mb-1 font-medium text-app-green-1"
                 >${{ item.price }}</span
               >
             </p>
             <ButtonComponent />
-            <p class="mt-2">
-              Edit request? <span class="font-medium">contactus</span>
+            <p class="mt-4">
+              Edit request?
+              <a class="font-medium text-app-green-1" href="/#contact"
+                >Contact us</a
+              >
             </p>
           </div>
         </div>
@@ -60,7 +63,7 @@
 export default {
   data() {
     return {
-      Packages: [
+      packages: [
         {
           id: 0,
           img: 'appdev.png',

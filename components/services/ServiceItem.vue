@@ -23,7 +23,7 @@
         class="relative z-20 w-full lg:w-1/2 flex flex-col my-12 text-center"
         :class="textAlignStyle"
       >
-        <span 
+        <span
           class="text-4xl mb-3 tracking-wide font-bold w-full"
           :class="imageLeftSide ? 'lg:pr-0 lg:pl-16' : 'lg:pl-0 lg:pr-16'"
         >
@@ -45,19 +45,19 @@ export default {
   props: {
     title: {
       type: String,
-      required: true
+      required: true,
     },
     description: {
       type: String,
-      required: true
+      required: true,
     },
     imageUrl: {
       type: String,
-      required: true
+      required: true,
     },
     imageLeftSide: {
       type: Boolean,
-      required: true
+      required: true,
     },
   },
   setup(props) {
@@ -68,5 +68,4 @@ export default {
     return { textAlignStyle }
   },
 }
-
 </script>

@@ -66,7 +66,7 @@
           <div class="m-6 flex justify-center">
             <button
               type="submit"
-              class="px-12 py-2 font-bold text-2xl text-app-green-1 border-4 border-app-green-1 rounded-full focus:outline-none"
+              class="px-12 py-2 font-bold text-2xl text-app-green-1 hover:text-white border-4 border-app-green-1 hover:bg-app-green-1 rounded-full focus:outline-none transition ease-in-out duration-300"
             >
               Send message
             </button>
