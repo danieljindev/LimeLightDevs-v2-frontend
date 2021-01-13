@@ -43,14 +43,14 @@ export default {
         title: 'Mobile App',
         description:
           'Lorem ipsum dolor sit amet consectetur adipiscing elit, fames semper vehicula velit dapibus in iaculis. Eros cursus lobortis leo hendrerit faucibus parturient sagittis justo curabitur lacinia ridiculus class. Lorem ipsum dolor Sit amet consectetur adipiscing Semper vehicula velit dapibus Leo hendrerit faucibus parturient',
-        imageUrl: '/services/phones.png',
+        imageUrl: '/phones01.png',
         imageLeftSide: false,
       },
       {
         title: 'Web',
         description:
           'Lorem ipsum dolor sit amet consectetur adipiscing elit, fames semper vehicula velit dapibus in iaculis. Eros cursus lobortis leo hendrerit faucibus parturient sagittis justo curabitur lacinia ridiculus class. Lorem ipsum dolor Sit amet consectetur adipiscing Semper vehicula velit dapibus Leo hendrerit faucibus parturient',
-        imageUrl: '/services/unboggled.png',
+        imageUrl: '/unboggled01.png',
         imageLeftSide: true,
       },
     ]

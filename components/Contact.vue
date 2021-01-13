@@ -6,24 +6,12 @@
       >
         Get in touch
       </div>
-      <div class="absolute top-0 w-full flex justify-center">
-        <img
-          draggable="false"
-          class="transform -translate-y-24 sm:-translate-y-40 translate-x-0 lg:translate-x-48"
-          src="/contact/leaves.png"
-        />
-      </div>
       <div
         class="relative rounded-3xl bg-app-gray-2 flex flex-col-reverse lg:flex-row justify-center lg:justify-end items-center"
       >
         <div
           class="relative lg:absolute lg:left-0 w-full h-full rounded-3xl flex items-end justify-center lg:justify-start select-none"
         >
-          <img
-            draggable="false"
-            class="hidden lg:block lg:absolute lg:left-0 object-cover z-10 w-1/3 h-full rounded-2xl"
-            src="/contact/bunchofleaves.png"
-          />
           <img
             draggable="false"
             class="lg:pl-6 lg:pt-6 object-contain z-20 w-1/2 lg:w-1/4 max-h-full"

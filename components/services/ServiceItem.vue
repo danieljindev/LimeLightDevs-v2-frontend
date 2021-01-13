@@ -1,15 +1,5 @@
 <template>
   <div class="relative w-full flex justify-center">
-    <img
-      src="/contact/leaves.png"
-      class="absolute z-0 w-64 lg:w-auto select-none transform -translate-y-24 lg:-translate-y-64 scale-110 lg:scale-90"
-      :class="
-        imageLeftSide
-          ? 'translate-x-1/2 rotate-12'
-          : '-translate-x-1/2 -rotate-12'
-      "
-      draggable="false"
-    />
     <div
       class="z-10 w-5/6 h-auto lg:h-128 bg-app-gray-2 rounded-2xl shadow-2xl mb-24 lg:mb-40 flex flex-col items-center"
       :class="imageLeftSide ? 'lg:flex-row' : 'lg:flex-row-reverse'"
