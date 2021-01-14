@@ -37,7 +37,7 @@
             <p><span class="font-bold">2</span> Design revision</p>
             <p><span class="font-bold">1</span> Development revision</p>
             <p>Unlimited Contact</p>
-            <p class="mt-2 lg:mt-3">
+            <p class="my-2 lg:mt-3">
               <span class="mr-2 text-sm line-through"
                 >${{ item.slashedPrice }}</span
               >
@@ -45,7 +45,7 @@
                 >${{ item.price }}</span
               >
             </p>
-            <ButtonComponent />
+            <Button variant="two">Order Package</Button>
             <p class="mt-4">
               Edit request?
               <a class="font-medium text-app-green-1" href="/#contact"
@@ -60,7 +60,9 @@
 </template>
 
 <script>
+import Button from '../common/Button.vue'
 export default {
+  components: { Button },
   data() {
     return {
       packages: [
