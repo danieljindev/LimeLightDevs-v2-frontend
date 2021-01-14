@@ -14,6 +14,7 @@
       <p class="text-md lg:text-lg w-5/6 mb-8">
         {{ desc }}
       </p>
+      <Button variant="variant1"> Contact Us </Button>
       <div
         class="flex h-full items-center justify-center mt-8 lg:mt-0 lg:absolute lg:left-0 pointer-events-none"
       >
@@ -28,7 +29,12 @@
 </template>
 
 <script>
+import Button from './common/Button'
+
 export default {
+  components: {
+    Button,
+  },
   props: {
     title: String,
     desc: String,
