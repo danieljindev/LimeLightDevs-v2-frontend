@@ -1,6 +1,7 @@
 <template>
   <div class="container mx-auto py-8 px-4">
-    <div class="flex items-center justify-between">
+    <!-- so navbar always takes priority, will actually be absolute in the future for a few reasons -->
+    <div class="flex items-center justify-between relative z-40">
       <NavLogo />
       <NavDesktop :nav-links="navLinks" />
       <NavMobile :nav-links="navLinks" />
@@ -13,7 +14,7 @@ export default {
     navLinks: {
       services: {
         name: 'Services',
-        href: '#services',
+        href: '/services',
       },
       packages: {
         name: 'Packages',

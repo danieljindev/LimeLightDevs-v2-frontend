@@ -1,8 +1,5 @@
 <template>
-  <div>
-    <Hero />
-    <Packages />
-  </div>
+  <Services />
 </template>
 
 <script>
