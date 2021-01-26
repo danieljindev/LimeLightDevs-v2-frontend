@@ -9,7 +9,7 @@ module.exports = {
     additionalBreakpoint: true,
     applyComplexClasses: true,
     extendedFontSizeScale: true,
-    extenedSpacingScale: true,
+    extendedSpacingScale: true,
   },
   // nuxt tailwind handles this by default so no need to configure
   purge: [],
