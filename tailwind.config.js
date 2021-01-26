@@ -14,8 +14,12 @@ module.exports = {
   // nuxt tailwind handles this by default so no need to configure
   purge: [],
   theme: {
+    
     extend: {
+
       spacing: {
+        72: '18rem',
+        80: '20rem',
         96: '24rem',
         128: '32rem',
       },
