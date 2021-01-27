@@ -1,5 +1,5 @@
 <template>
-  <div class="w-full flex justify-center">
+  <div class="hidden lg:flex w-full justify-center">
     <a
       href="#works"
       draggable="false"
@@ -39,15 +39,15 @@
 import { reactive } from '@nuxtjs/composition-api'
 
 export default {
-  setup() {
-    const images = [
-      '/works/1.jpg',
-      '/works/2.jpg',
-      '/works/3.jpg',
-      '/works/4.jpg',
-    ]
-    const projectCount = 52
-    return { images, projectCount }
+  props: {
+    images: {
+      type: Array,
+      required: true,
+    },
+    projectCount: {
+      type: Number,
+      required: true,
+    },
   },
 }
 </script>

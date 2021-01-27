@@ -1,7 +1,7 @@
 <template>
   <div>
     <Hero />
-    <Works />
+    <WorksComponent />
     <Packages />
   </div>
 </template>
