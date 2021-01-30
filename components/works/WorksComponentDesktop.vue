@@ -36,8 +36,6 @@
 </template>
 
 <script>
-import { reactive } from '@nuxtjs/composition-api'
-
 export default {
   props: {
     images: {
