@@ -2,6 +2,7 @@
   <div>
     <Hero />
     <Packages />
+    <OurProcess />
   </div>
 </template>
 
