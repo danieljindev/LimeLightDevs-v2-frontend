@@ -14,10 +14,21 @@ module.exports = {
   // nuxt tailwind handles this by default so no need to configure
   purge: [],
   theme: {
+
     extend: {
+
+      width: {
+        '2/7': '28.5714286%',
+        '3/10': '30%'
+      },
+
       spacing: {
+        28: '7rem',
+        72: '18rem',
+        80: '20rem',
         96: '24rem',
         128: '32rem',
+
       },
       colors: {
         // main
