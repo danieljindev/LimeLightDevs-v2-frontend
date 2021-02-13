@@ -2,7 +2,7 @@
   <div class="flex justify-center w-11/12 m-auto mt-16 mb-40">
     <div class="z-10 w-full text-center">
       <h3
-        class="mb-3 text-4xl font-semibold tracking-wide text-left 2xl:text-5xl lg:mb-0"
+        class="mb-3 text-2xl font-semibold tracking-wide text-left 2xl:text-5xl lg:mb-0"
       >
         Our Packages
       </h3>
