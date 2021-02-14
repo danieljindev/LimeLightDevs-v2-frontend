@@ -1,5 +1,5 @@
 <template>
-  <div class="relative mx-auto px-4 xl:px-6 2xl:px-16">
+  <div class="relative mx-auto">
     <div class="hidden lg:block absolute w-5/12 xl:w-4/12 right-0 top-0">
       <img
         class="w-full h-full object-contain block transform -translate-y-72 2xl:-translate-y-96"
@@ -10,7 +10,7 @@
     <div class="w-11/12 mx-auto">
       <h2 class="text-4xl font-bold mb-10 xl:mb-5">Our Process</h2>
       <div
-        class="hidden relative lg:flex justify-between mx-auto 2xl:max-w-screen-2xl -mt-6"
+        class="hidden container relative lg:flex justify-between mx-auto 2xl:max-w-screen-2xl -mt-6"
       >
         <ProcessPoint
           class="mt-48 transform"
