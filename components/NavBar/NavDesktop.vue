@@ -27,15 +27,15 @@ export default {
         return {
           services: {
             name: 'Services',
-            href: '#services',
+            href: 'services',
           },
           packages: {
             name: 'Packages',
-            href: '#packages',
+            href: 'packages',
           },
           works: {
             name: 'Works',
-            href: '#works',
+            href: 'works',
           },
           contactus: {
             name: 'Contact Us',
