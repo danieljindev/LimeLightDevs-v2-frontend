@@ -9,12 +9,12 @@
         vehicula velit dapibus in iaculis. Eros cursus lobortis leo hendrerit
         faucibus parturient sagittis justo curabitur lacinia ridiculus class.
       </p>
-      <a
-        href="#services"
+      <nuxt-link
+        to="/packages"
         class="px-5 md:px-8 py-2 tracking-wider font-bold text-xl text-app-green-1 border-2 border-app-green-1 rounded-full cursor-pointer focus:outline-none hover:text-white hover:bg-app-green-1"
       >
-        Check our Packages
-      </a>
+        Check our packages
+      </nuxt-link>
     </div>
     <ServiceCarousel />
     <div
