@@ -1,6 +1,13 @@
 <template>
-  <div class="flex justify-center w-11/12 m-auto mt-16 mb-40">
-    <div class="z-10 w-full text-center">
+  <div class="relative flex justify-center m-auto mt-16 mb-40">
+    <div class="absolute right-0 bottom-0 w-1/5">
+      <img
+        class="block w-full h-full transform translate-y-20"
+        src="greenblob05.png"
+        alt=""
+      />
+    </div>
+    <div class="z-10 text-center w-11/12 m-auto">
       <h3 class="mb-3 text-4xl font-semibold tracking-wide text-left lg:mb-0">
         Our Packages
       </h3>
