@@ -3,7 +3,7 @@
     <div class="absolute right-0 top-0 w-2/7">
       <img
         class="block w-full h-full transform translate-y-96"
-        src="greenblob07.png"
+        src="greenblob06.png"
         alt=""
       />
     </div>
