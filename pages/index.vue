@@ -1,8 +1,8 @@
 <template>
   <div>
     <Hero />
-    <Works />
-    <Packages />
+    <Works1 />
+    <Packages1 />
     <OurProcess />
   </div>
 </template>
