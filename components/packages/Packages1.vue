@@ -1,5 +1,12 @@
 <template>
   <div class="relative flex justify-center m-auto mt-16 mb-40">
+    <div class="hidden lg:block absolute w-5/12 -left-40 -top-20">
+      <img
+        class="w-full h-full object-contain block transform"
+        src="greenblob09.png"
+        alt=""
+      />
+    </div>
     <div class="z-10 text-center w-11/12 m-auto">
       <h3 class="mb-3 text-4xl font-semibold tracking-wide text-left lg:mb-0">
         Our Packages
