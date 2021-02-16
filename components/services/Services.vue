@@ -1,5 +1,8 @@
 <template>
-  <div class="w-full z-20 relative">
+  <div class="w-full z-20">
+    <div class="absolute right-0 top-28 w-2/6">
+      <img class="block w-full h-full transform" src="greenblob02.png" alt="" />
+    </div>
     <div
       class="text-white w-full lg:w-5/12 flex flex-col items-center lg:items-start lg:ml-48 mt-12 mb-32 text-center lg:text-left"
     >
