@@ -1,5 +1,5 @@
 <template>
-  <div class="container mx-auto py-8 px-4">
+  <div class="container mx-auto py-8 px-6 xl:px-48 2xl:px-4">
     <!-- so navbar always takes priority, will actually be absolute in the future for a few reasons -->
     <div class="flex items-center justify-between relative z-40">
       <NavLogo />
