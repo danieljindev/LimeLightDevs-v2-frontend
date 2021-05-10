@@ -1,6 +1,6 @@
 <template>
-  <div id="contact" class="w-full flex justify-center">
-    <div class="relative mx-auto my-16 w-11/12 z-10">
+  <section-container id="contact" class="relative z-10">
+    <div>
       <div
         class="relative font-bold z-20 text-6xl mb-10 text-center lg:text-left"
       >
@@ -62,13 +62,15 @@
         </form>
       </div>
     </div>
-  </div>
+  </section-container>
 </template>
 
 <script>
 import { reactive } from '@nuxtjs/composition-api'
+import SectionContainer from './common/SectionContainer.vue'
 
 export default {
+  components: { SectionContainer },
   setup() {
     const form = reactive({
       fullname: '',

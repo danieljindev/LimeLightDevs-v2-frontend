@@ -1,7 +1,6 @@
 <template>
-  <div
-    class="hidden lg:flex flex-col mx-auto w-11/12 justify-center shadow-2xl"
-  >
+  <div class="hidden lg:flex flex-col justify-center shadow-2xl">
+    {{ works }}
     <div
       class="relative flex flex-row justify-start z-10 w-full bg-app-gray-24 mt-16 rounded-t-2xl shadow-2xl"
     >
@@ -9,7 +8,7 @@
         v-for="(work, index) in works"
         :key="work.name"
         :work="work"
-        :roundedStyle="[
+        :rounded-style="[
           index === 0 ? 'rounded-tl-2xl' : '',
           index === works.length - 1 ? 'rounded-tr-2xl' : '',
         ]"
