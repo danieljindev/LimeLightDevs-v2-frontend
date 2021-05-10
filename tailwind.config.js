@@ -1,25 +1,11 @@
 module.exports = {
-  future: {
-    removeDeprecatedGapUtilities: true,
-    purgeLayersByDefault: true,
-    defaultLineHeights: true,
-    standardFontWeights: true,
-  },
-  experimental: {
-    additionalBreakpoint: true,
-    applyComplexClasses: true,
-    extendedFontSizeScale: true,
-    extendedSpacingScale: true,
-  },
   // nuxt tailwind handles this by default so no need to configure
   purge: [],
   theme: {
-
     extend: {
-
       width: {
         '2/7': '28.5714286%',
-        '3/10': '30%'
+        '3/10': '30%',
       },
 
       spacing: {
@@ -28,7 +14,6 @@ module.exports = {
         80: '20rem',
         96: '24rem',
         128: '32rem',
-
       },
       colors: {
         // main

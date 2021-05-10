@@ -1,5 +1,5 @@
 <template>
-  <div class="flex justify-center w-11/12 m-auto mt-16 mb-40">
+  <section-container class="mb-56">
     <div class="z-10 w-full text-center">
       <h3
         class="mb-3 text-4xl font-semibold tracking-wide text-left 2xl:text-5xl lg:mb-0"
@@ -56,13 +56,14 @@
         </div>
       </div>
     </div>
-  </div>
+  </section-container>
 </template>
 
 <script>
 import Button from '../common/Button.vue'
+import SectionContainer from '../common/SectionContainer.vue'
 export default {
-  components: { Button },
+  components: { Button, SectionContainer },
   data() {
     return {
       packages: [
