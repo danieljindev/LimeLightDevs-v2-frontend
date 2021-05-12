@@ -24,13 +24,13 @@
         </div>
       </div>
     </section-container>
-    <Packages />
-    <OurProcess />
+    <Packages :data="apiData" />
+    <!-- <OurProcess /> -->
   </div>
 </template>
 
 <script>
-import Container from '~/components/common/Container.vue'
+// import Container from '~/components/common/Container.vue'
 import SectionContainer from '~/components/common/SectionContainer.vue'
 import SectionTitle from '~/components/common/SectionTitle.vue'
 export default {
@@ -142,8 +142,26 @@ export default {
   },
   data() {
     return {
-      Container,
+      apiData: null,
+      loading: true,
+      error: false,
     }
+  },
+  mounted() {
+    this.getData()
+    console.log(`working`)
+  },
+  methods: {
+    async getData() {
+      try {
+        const { data } = await this.$axios(`/services`)
+        this.loading = false
+        console.log('res', data)
+        this.apiData = data
+      } catch (error) {
+        this.error = error
+      }
+    },
   },
 }
 </script>

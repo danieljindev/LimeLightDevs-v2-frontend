@@ -38,7 +38,9 @@ export default {
   ],
 
   // Axios module configuration (https://go.nuxtjs.dev/config-axios)
-  axios: {},
+  axios: {
+    baseURL: 'https://limelightdevs.herokuapp.com',
+  },
   tailwindcss: {
     jit: true,
   },
