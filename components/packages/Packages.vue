@@ -9,10 +9,13 @@
       <ul
         class="flex flex-no-wrap justify-end font-bold mb-3 mr-2 space-x-4 text-md lg:space-x-12"
       >
-        <li><a href="#"> extra</a></li>
+        <li v-for="item in data" :key="item.title">
+          <a href="#">{{ item.title }}</a>
+        </li>
+        <!-- <li><a href="#"> extra</a></li>
         <li><a href="#"> figma</a></li>
         <li class="underline text-app-green-1"><a href="#">e-commerce</a></li>
-        <li><a href="#">basic</a></li>
+        <li><a href="#">basic</a></li> -->
       </ul>
 
       <div class="w-full overflow-x-auto lg:rounded-2xl lg:shadow-2xl">
@@ -64,6 +67,12 @@ import Button from '../common/Button.vue'
 import SectionContainer from '../common/SectionContainer.vue'
 export default {
   components: { Button, SectionContainer },
+  props: {
+    data: {
+      type: Array,
+      default: null,
+    },
+  },
   data() {
     return {
       packages: [
