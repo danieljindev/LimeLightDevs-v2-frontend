@@ -7,7 +7,7 @@
         alt=""
       />
     </div> -->
-    <section-container>
+    <section-container :default-margins="false">
       <section-title text="Our Process" />
       <div
         class="hidden container relative lg:flex justify-between mx-auto 2xl:max-w-screen-2xl -mt-6"
@@ -40,7 +40,10 @@
     </section-container>
 
     <!-- Small Screen -->
-    <div class="flex flex-col items-center lg:hidden">
+    <section-container
+      :default-margins="false"
+      class="flex flex-col items-center lg:hidden"
+    >
       <ProcessPoint
         src="/processes/wireframes.png"
         body="App pagesLorem ipsum dolor sit amet consectetur adipiscing elit, fames semper vehicula."
@@ -60,7 +63,7 @@
         body="App pagesLorem ipsum dolor sit amet consectetur adipiscing elit, fames semper vehicula."
         subhead="Launch"
       />
-    </div>
+    </section-container>
   </div>
 </template>
 
