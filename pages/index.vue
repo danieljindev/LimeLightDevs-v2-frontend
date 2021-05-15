@@ -1,30 +1,45 @@
 <template>
-  <div>
+  <!-- overflow hidden is required for blobs -->
+  <div class="lg:overflow-x-hidden">
     <Hero />
     <!-- <Works /> -->
     <!-- <container :default-margins="false" /> -->
     <Packages />
-    <section-container class="relative z-[1]" :default-margins="false">
-      <section-title text="Our Works" />
-      <div class="flex flex-wrap rounded-lg overflow-hidden">
-        <div v-for="work in works" :key="work.id" class="w-1/4 relative group">
-          <img class="w-full h-[240px]" :src="work.image" :alt="work.name" />
+    <!-- <section-container class="relaitve" :default-margins="false">
+      <img class="w-full absolute right-0" src="greenblob09.png" alt="" />
+    </section-container> -->
+    <div class="relative">
+      <div class="absolute right-[-100px] bottom-[-400px] w-[50rem]">
+        <img class="w-full" src="greenblob09.png" alt="" />
+      </div>
+      <section-container class="relative z-[1]" :default-margins="false">
+        <section-title text="Our Works" />
+        <div
+          class="flex flex-wrap rounded-2xl overflow-hidden relative shadow-2xl"
+        >
           <div
-            class="h-full w-full opacity-0 group-hover:opacity-100 duration-150 ease-in-out bg-black bg-opacity-50 absolute inset-0 flex justify-center items-center"
+            v-for="work in works"
+            :key="work.id"
+            class="w-1/4 relative group"
           >
-            <div class="text-center">
-              <h2 class="mb-4 text-3xl font-bold">{{ work.name }}</h2>
-              <a
-                href="#"
-                class="bg-white py-2 px-5 text-black rounded-md hover:text-white hover:bg-app-green-1 duration-150 ease-in-out"
-              >
-                Visit site
-              </a>
+            <img class="w-full h-[240px]" :src="work.image" :alt="work.name" />
+            <div
+              class="h-full w-full opacity-0 group-hover:opacity-100 duration-150 ease-in-out bg-black bg-opacity-50 absolute inset-0 flex justify-center items-center"
+            >
+              <div class="text-center">
+                <h2 class="mb-4 text-3xl font-bold">{{ work.name }}</h2>
+                <a
+                  href="#"
+                  class="bg-white py-2 px-5 text-black rounded-md hover:text-white hover:bg-app-green-1 duration-150 ease-in-out"
+                >
+                  Visit site
+                </a>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    </section-container>
+      </section-container>
+    </div>
     <our-process />
   </div>
 </template>
