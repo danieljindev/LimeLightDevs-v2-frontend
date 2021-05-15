@@ -1,5 +1,8 @@
 <template>
-  <div class="w-full z-20 relative">
+  <div class="w-full z-20">
+    <div class="absolute right-0 top-28 w-2/6">
+      <img class="block w-full h-full transform" src="greenblob02.png" alt="" />
+    </div>
     <div
       class="text-white w-full lg:w-5/12 flex flex-col items-center lg:items-start lg:ml-48 mt-12 mb-32 text-center lg:text-left"
     >
@@ -9,12 +12,12 @@
         vehicula velit dapibus in iaculis. Eros cursus lobortis leo hendrerit
         faucibus parturient sagittis justo curabitur lacinia ridiculus class.
       </p>
-      <a
-        href="#services"
+      <nuxt-link
+        to="/packages"
         class="px-5 md:px-8 py-2 tracking-wider font-bold text-xl text-app-green-1 border-2 border-app-green-1 rounded-full cursor-pointer focus:outline-none hover:text-white hover:bg-app-green-1"
       >
-        Check our Packages
-      </a>
+        Check our packages
+      </nuxt-link>
     </div>
     <ServiceCarousel />
     <div

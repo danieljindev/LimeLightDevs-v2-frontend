@@ -18,7 +18,7 @@ export default {
       },
       packages: {
         name: 'Packages',
-        href: '/', // packages are located on home page
+        href: '/packages', // packages are located on home page
       },
       works: {
         name: 'Works',

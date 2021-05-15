@@ -9,52 +9,20 @@
       <ul
         class="flex flex-no-wrap justify-end font-bold mb-3 mr-2 space-x-4 text-md lg:space-x-12"
       >
-        <li><a href="#"> extra</a></li>
-        <li><a href="#"> figma</a></li>
-        <li class="underline text-app-green-1"><a href="#">e-commerce</a></li>
-        <li><a href="#">basic</a></li>
-      </ul>
-
-      <div class="w-full overflow-x-auto lg:rounded-2xl lg:shadow-2xl">
-        <div class="flex w-full">
-          <div
-            v-for="(item, id) in packages"
-            :key="id"
-            class="flex flex-col items-center h-auto px-6 py-4 mx-2 text-sm border-r-2 shadow-2xl package lg:min-w-0 rounded-3xl lg:rounded-none lg:m-0 bg-app-gray-2 min-w-3/4 border-app-gray-1 lg:shadow-none"
-          >
-            <img
-              class="my-2 lg:my-4"
-              :src="'/packages/' + item.img"
-              alt="pack"
-            />
-            <!-- <img src="/packages/Edit4.png" alt=""> -->
-            <h4 class="mb-2 text-xl font-medium leading-none">
-              {{ item.package }}
-            </h4>
-            <p class="mb-2 leading-4 lg:mb-4">{{ item.desc }}</p>
-            <p><span class="font-bold">3</span> App pages</p>
-            <p><span class="font-bold">5</span> Stock images</p>
-            <p><span class="font-bold">2</span> Design revision</p>
-            <p><span class="font-bold">1</span> Development revision</p>
-            <p>Unlimited Contact</p>
-            <p class="my-2 lg:mt-3">
-              <span class="mr-2 text-sm line-through"
-                >${{ item.slashedPrice }}</span
-              >
-              <span class="text-xl mb-1 font-medium text-app-green-1"
-                >${{ item.price }}</span
-              >
-            </p>
-            <Button variant="two">Order Package</Button>
-            <p class="mt-4">
-              Edit request?
-              <a class="font-medium text-app-green-1" href="/#contact"
-                >Contact us</a
-              >
-            </p>
-          </div>
-        </div>
+        <span class="text-4xl md:text-5xl font-hibana">Our Packages</span>
+        <p class="text-lg px-8 lg:px-0 mt-2 mb-10 tracking-wide">
+          Lorem ipsum dolor sit amet consectetur adipiscing elit, fames semper
+          vehicula velit dapibus in iaculis. Eros cursus lobortis leo hendrerit
+          faucibus parturient sagittis justo curabitur lacinia ridiculus class.
+        </p>
+        <nuxt-link
+          to="/services"
+          class="px-5 md:px-8 py-2 tracking-wider font-bold text-xl text-app-green-1 border-2 border-app-green-1 rounded-full cursor-pointer focus:outline-none hover:text-white hover:bg-app-green-1"
+        >
+          Check our Services
+        </nuxt-link>
       </div>
+      <Packages1 />
     </div>
   </section-container>
 </template>
@@ -113,10 +81,5 @@ export default {
 }
 </script>
 
-<style scoped>
-@media (min-width: 1024px) {
-  .package {
-    min-width: 0;
-  }
-}
+<style>
 </style>

@@ -1,6 +1,8 @@
 <template>
   <div>
     <Hero />
+    <Works1 />
+    <Packages1 />
     <!-- <Works /> -->
     <!-- <container :default-margins="false" /> -->
     <section-container :default-margins="false">

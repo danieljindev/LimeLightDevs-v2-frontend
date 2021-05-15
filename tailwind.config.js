@@ -10,9 +10,13 @@ module.exports = {
 
       spacing: {
         28: '7rem',
+        52: '13rem',
+        60: '15rem',
         72: '18rem',
         80: '20rem',
+        84: '22rem',
         96: '24rem',
+        136: '32rem',
         128: '32rem',
       },
       colors: {
