@@ -1,22 +1,13 @@
 <template>
-  <div class="m-auto mt-16 mb-40">
-    <div class="absolute left-0 top-0 w-3/6">
-      <img class="block w-full h-full transform" src="greenblob08.png" alt="" />
-    </div>
-    <div class="absolute right-0 top-0 w-2/6">
-      <img class="block w-full h-full transform" src="darkblob01.png" alt="" />
-    </div>
-    <div class="relative">
-      <div class="absolute right-0 top-0 w-2/7">
-        <img
-          class="block w-full h-full transform translate-y-96"
-          src="greenblob06.png"
-          alt=""
-        />
-      </div>
-      <div
-        <div
-        class="text-white w-full lg:w-5/12 flex flex-col items-center lg:items-start lg:ml-48 mt-12 mb-32 text-center lg:text-left"
+  <section-container class="mb-56">
+    <div class="z-10 w-full text-center">
+      <h3
+        class="mb-3 text-4xl font-semibold tracking-wide text-left 2xl:text-5xl lg:mb-0"
+      >
+        Our Packages
+      </h3>
+      <ul
+        class="flex flex-no-wrap justify-end font-bold mb-3 mr-2 space-x-4 text-md lg:space-x-12"
       >
         <span class="text-4xl md:text-5xl font-hibana">Our Packages</span>
         <p class="text-lg px-8 lg:px-0 mt-2 mb-10 tracking-wide">
@@ -33,11 +24,61 @@
       </div>
       <Packages1 />
     </div>
-  </div>
+  </section-container>
 </template>
 
 <script>
-export default {}
+import Button from '../common/Button.vue'
+import SectionContainer from '../common/SectionContainer.vue'
+export default {
+  components: { Button, SectionContainer },
+  data() {
+    return {
+      packages: [
+        {
+          id: 0,
+          img: 'appdev.png',
+          package: 'App development',
+          desc:
+            'App devLorem, ipsum dolor sit amet consectetur adipisicing elit. Consequatuporro, architecto totam recusandae praesentium.',
+
+          slashedPrice: 240,
+          price: 149,
+        },
+        {
+          id: 1,
+          img: 'desktop.png',
+          package: 'Web development',
+          desc:
+            'App devLorem, ipsum dolor sit amet consectetur adipisicing elit. Consequatuporro, architecto totam recusandae praesentium.',
+
+          slashedPrice: 149,
+          price: 299,
+        },
+        {
+          id: 2,
+          img: 'appdev.png',
+          package: 'Full development',
+          desc:
+            'App devLorem, ipsum dolor sit amet consectetur adipisicing elit. Consequatuporro, architecto totam recusandae praesentium.',
+
+          slashedPrice: 120,
+          price: 999,
+        },
+        {
+          id: 3,
+          img: 'Edit4.png',
+          package: 'Personalised',
+          desc:
+            'App devLorem, ipsum dolor sit amet consectetur adipisicing elit. Consequatuporro, architecto totam recusandae praesentium.',
+
+          slashedPrice: 399,
+          price: '1000+',
+        },
+      ],
+    }
+  },
+}
 </script>
 
 <style>

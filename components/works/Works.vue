@@ -1,18 +1,8 @@
 <template>
-  <div class="m-auto mt-16 mb-40">
-    <div class="absolute top-0 w-4/5">
-      <img class="block w-full h-full transform" src="greenblob04.png" alt="" />
-    </div>
-    <div class="relative">
-      <div class="absolute right-0 top-0 w-2/7">
-        <img
-          class="block w-full h-full transform translate-y-60"
-          src="greenblob05.png"
-          alt=""
-        />
-      </div>
-      <div
-        class="text-white w-full lg:w-5/12 flex flex-col items-center lg:items-start lg:ml-48 mt-12 mb-32 text-center lg:text-left"
+  <container variant="two">
+    <div>
+      <h3
+        class="mb-3 text-4xl font-semibold tracking-wide text-left 2xl:text-5xl lg:mb-0"
       >
         <span class="text-4xl font-hibana">Works</span>
         <p class="text-lg px-8 lg:px-0 mt-2 mb-10 tracking-wide">
@@ -29,11 +19,16 @@
       </div>
       <Works1 />
     </div>
-  </div>
+    <WorksComponent />
+  </container>
 </template>
 
 <script>
-export default {}
+import Container from '../common/Container.vue'
+export default {
+  components: { Container },
+  setup() {},
+}
 </script>
 
 <style></style>
