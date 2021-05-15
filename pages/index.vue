@@ -1,13 +1,12 @@
 <template>
   <div>
     <Hero />
-    <Works1 />
-    <Packages1 />
     <!-- <Works /> -->
     <!-- <container :default-margins="false" /> -->
-    <section-container :default-margins="false">
+    <Packages />
+    <section-container class="relative z-[1]" :default-margins="false">
       <section-title text="Our Works" />
-      <div class="flex flex-wrap rounded-lg">
+      <div class="flex flex-wrap rounded-lg overflow-hidden">
         <div v-for="work in works" :key="work.id" class="w-1/4 relative group">
           <img class="w-full h-[240px]" :src="work.image" :alt="work.name" />
           <div
@@ -26,8 +25,7 @@
         </div>
       </div>
     </section-container>
-    <Packages />
-    <OurProcess />
+    <our-process />
   </div>
 </template>
 
@@ -35,8 +33,9 @@
 import Container from '~/components/common/Container.vue'
 import SectionContainer from '~/components/common/SectionContainer.vue'
 import SectionTitle from '~/components/common/SectionTitle.vue'
+import OurProcess from '~/components/process/OurProcess.vue'
 export default {
-  components: { SectionTitle, SectionContainer },
+  components: { SectionTitle, SectionContainer, OurProcess },
   setup() {
     // images shown for works component, should probs be fetched from backend
     // one issue i see for mobile view (that also occurs with the Packages component) is that because the component has w-11/12, it can sometimes look oddly clipped off

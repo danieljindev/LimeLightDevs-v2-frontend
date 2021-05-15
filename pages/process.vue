@@ -2,7 +2,7 @@
   <div class="container mx-auto px-4 xl:px-6 2xl:px-16">
     <h2 class="text-4xl font-bold mb-10 xl:mb-5">Our Process</h2>
     <div class="hidden relative lg:flex justify-between mx-auto">
-      <ProcessPoint
+      <process-point
         class="mt-48 transform"
         src="/processes/wireframes.png"
         body="App pagesLorem ipsum dolor sit amet consectetur adipiscing."
@@ -54,10 +54,11 @@
 </template>
 
 <script>
+import ProcessPoint from '~/components/landing/process/ProcessPoint.vue'
 import LeftDottedLine from '~/components/misc/icons/LeftDottedLine.vue'
 import RightDottedLine from '~/components/misc/icons/RightDottedLine.vue'
 export default {
-  components: { RightDottedLine, LeftDottedLine },
+  components: { RightDottedLine, LeftDottedLine, ProcessPoint },
 }
 </script>
 

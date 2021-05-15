@@ -1,12 +1,5 @@
 <template>
-  <div class="relative flex justify-center m-auto mt-16 mb-40">
-    <div class="hidden lg:block absolute w-5/12 -left-40 -top-20">
-      <img
-        class="w-full h-full object-contain block transform"
-        src="greenblob09.png"
-        alt=""
-      />
-    </div>
+  <SectionerContainer class="relative m-auto">
     <div class="z-10 text-center w-11/12 m-auto">
       <h3 class="mb-3 text-4xl font-semibold tracking-wide text-left lg:mb-0">
         Our Packages
@@ -20,12 +13,15 @@
         <li><a href="#">basic</a></li>
       </ul>
 
-      <div class="w-full overflow-x-auto lg:rounded-2xl lg:shadow-2xl">
+      <div class="w-full overflow-x-auto lg:rounded-2xl lg:shadow-2xl relative">
+        <!-- <div class="absolute">
+          <img class="w-full absolute" src="greenblob09.png" alt="" />
+        </div> -->
         <div class="flex w-full">
           <div
             v-for="(item, id) in packages"
             :key="id"
-            class="flex flex-col items-center h-auto px-6 py-4 mx-2 text-sm border-r-2 shadow-2xl package lg:min-w-0 rounded-3xl lg:rounded-none lg:m-0 bg-app-gray-2 min-w-3/4 border-app-gray-1 lg:shadow-none"
+            class="flex flex-col items-center h-auto px-6 py-4 mx-2 text-sm border-r-2 shadow-2xl package lg:min-w-0 rounded-3xl lg:rounded-none lg:m-0 bg-app-gray-2 border-app-gray-1 lg:shadow-none"
           >
             <img
               class="my-2 lg:my-4"
@@ -61,7 +57,7 @@
         </div>
       </div>
     </div>
-  </div>
+  </SectionerContainer>
 </template>
 
 <script>

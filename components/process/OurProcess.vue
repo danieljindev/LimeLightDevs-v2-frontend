@@ -1,18 +1,18 @@
 <template>
-  <div class="relative mx-auto">
-    <div class="hidden lg:block absolute w-5/12 xl:w-4/12 right-0 top-0">
+  <div>
+    <!-- <div class="hidden lg:block absolute w-5/12 xl:w-4/12 right-0 top-0">
       <img
         class="w-full h-full object-contain block transform -translate-y-72 2xl:-translate-y-96"
         src="greenblob02.png"
         alt=""
       />
-    </div>
-    <div class="w-11/12 mx-auto">
-      <h2 class="text-4xl font-bold mb-10 xl:mb-5">Our Process</h2>
+    </div> -->
+    <section-container>
+      <section-title text="Our Process" />
       <div
         class="hidden container relative lg:flex justify-between mx-auto 2xl:max-w-screen-2xl -mt-6"
       >
-        <ProcessPoint
+        <process-point
           class="mt-48 transform"
           src="/processes/wireframes.png"
           body="App pagesLorem ipsum dolor sit amet consectetur adipiscing."
@@ -37,7 +37,7 @@
           subhead="Launch!"
         />
       </div>
-    </div>
+    </section-container>
 
     <!-- Small Screen -->
     <div class="flex flex-col items-center lg:hidden">
@@ -65,10 +65,19 @@
 </template>
 
 <script>
+import ProcessPoint from '../landing/process/ProcessPoint.vue'
+import SectionContainer from '../common/SectionContainer.vue'
+import SectionTitle from '../common/SectionTitle.vue'
 import LeftDottedLine from '~/components/misc/icons/LeftDottedLine.vue'
 import RightDottedLine from '~/components/misc/icons/RightDottedLine.vue'
 export default {
-  components: { RightDottedLine, LeftDottedLine },
+  components: {
+    RightDottedLine,
+    LeftDottedLine,
+    ProcessPoint,
+    SectionContainer,
+    SectionTitle,
+  },
 }
 </script>
 
