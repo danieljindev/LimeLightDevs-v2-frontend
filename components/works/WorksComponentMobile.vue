@@ -1,7 +1,16 @@
 <template>
-  <div class="lg:hidden flex w-11/12 mx-auto my-4">
-    <div class="w-full overflow-x-auto z-30 flex p-3">
+  <section-container class="sm:hidden w-11/12 mx-auto my-4">
+    <section-title text="Our Works" />
+    <div class="overflow-x-auto flex flex-nowrap p-3">
       <div
+        v-for="work in works"
+        :key="work.id"
+        style="heigh"
+        class="mr-12 shadow-2xl rounded-2xl min-w-128 min-h-128"
+      >
+        <works-card :work="work" />
+      </div>
+      <!-- <div
         v-for="(work, id) in works"
         :key="id"
         class="mr-12 shadow-2xl rounded-2xl min-w-128"
@@ -14,13 +23,22 @@
             class="w-full h-full object-cover rounded-2xl"
           />
         </a>
-      </div>
+      </div> -->
     </div>
-  </div>
+  </section-container>
 </template>
 
 <script>
+import WorksCard from '~/components/works/WorkCard'
+import SectionTitle from '~/components/common/SectionTitle.vue'
+import SectionContainer from '~/components/common/SectionContainer.vue'
+
 export default {
+  components: {
+    SectionContainer,
+    SectionTitle,
+    WorksCard,
+  },
   props: {
     works: {
       type: Array,

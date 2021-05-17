@@ -1,47 +1,43 @@
 <template>
-  <div class="hidden lg:flex flex-col justify-center shadow-2xl">
-    {{ works }}
+  <section-container
+    class="relative z-[1] hidden sm:block"
+    :default-margins="false"
+  >
+    <section-title text="Our Works" />
     <div
-      class="relative flex flex-row justify-start z-10 w-full bg-app-gray-24 mt-16 rounded-t-2xl shadow-2xl"
+      class="
+        sm:flex
+        flex-wrap
+        items-stretch
+        rounded-2xl
+        overflow-hidden
+        relative
+        shadow-2xl
+        hidden
+      "
     >
-      <WorkCard
-        v-for="(work, index) in works"
-        :key="work.name"
-        :work="work"
-        :rounded-style="[
-          index === 0 ? 'rounded-tl-2xl' : '',
-          index === works.length - 1 ? 'rounded-tr-2xl' : '',
-        ]"
-      />
-    </div>
-    <a
-      href="#works"
-      draggable="false"
-      class="h-32 bg-app-gray-2 text-center w-full rounded-b-2xl flex justify-center items-center"
-    >
-      <p class="text-white opacity-100 text-2xl mr-4">
-        See all {{ projectCount }} projects
-      </p>
-      <div
-        class="rounded-full w-12 h-12 bg-white bg-opacity-75 hover:bg-opacity-100 transition duration-200 ease-in-out cursor-pointer flex items-center justify-center"
-      >
-        <Icon name="rightArrow" />
+      <div v-for="work in works" :key="work.id" class="w-1/4">
+        <works-card :work="work" />
       </div>
-    </a>
-  </div>
+    </div>
+  </section-container>
 </template>
 
 <script>
+import SectionTitle from '~/components/common/SectionTitle.vue'
+import SectionContainer from '~/components/common/SectionContainer.vue'
+import WorksCard from '~/components/works/WorkCard'
+
 export default {
+  components: { SectionContainer, SectionTitle, WorksCard },
   props: {
     works: {
       type: Array,
-      required: true,
-    },
-    projectCount: {
-      type: Number,
-      required: true,
+      default: () => [],
     },
   },
+  setup() {},
 }
 </script>
+
+<style></style>
