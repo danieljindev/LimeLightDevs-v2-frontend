@@ -1,7 +1,7 @@
 <template>
   <div
     :class="defaultMargins ? 'mt-48' : ''"
-    class="container mx-auto py-8 px-6 lg:px-10 xl:px-32"
+    class="container mx-auto py-8 px-6 lg:px-10 xl:px-8 2xl:px-24"
   >
     <slot />
   </div>
