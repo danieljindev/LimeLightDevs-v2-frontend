@@ -3,27 +3,38 @@
   <div class="lg:overflow-x-hidden">
     <Hero />
     <!-- <Works /> -->
-    <!-- <container :default-margins="false" /> -->
-    <Packages />
-    <!-- <section-container class="relaitve" :default-margins="false">
-      <img class="w-full absolute right-0" src="greenblob09.png" alt="" />
-    </section-container> -->
-    <div class="relative">
-      <div class="absolute right-[-100px] bottom-[-400px] w-[50rem]">
-        <img class="w-full" src="greenblob09.png" alt="" />
+    <section-container :default-margins="false">
+      <section-title text="Our Works" />
+      <div class="flex flex-wrap rounded-lg">
+        <div v-for="work in works" :key="work.id" class="w-1/4 relative group">
+          <img class="w-full h-[240px]" :src="work.image" :alt="work.name" />
+          <div
+            class="h-full w-full opacity-0 group-hover:opacity-100 duration-150 ease-in-out bg-black bg-opacity-50 absolute inset-0 flex justify-center items-center"
+          >
+            <div class="text-center">
+              <h2 class="mb-4 text-3xl font-bold">{{ work.name }}</h2>
+              <a
+                href="#"
+                class="bg-white py-2 px-5 text-black rounded-md hover:text-white hover:bg-app-green-1 duration-150 ease-in-out"
+              >
+                Visit site
+              </a>
+            </div>
+          </div>
+        </div>
       </div>
-      <works-component />
-    </div>
-    <our-process />
+    </section-container>
+    <Packages />
+    <!-- <OurProcess /> -->
   </div>
 </template>
 
 <script>
-import Container from '~/components/common/Container.vue'
-import OurProcess from '~/components/process/OurProcess.vue'
-import WorksComponent from '~/components/works/WorksComponent'
+// import Container from '~/components/common/Container.vue'
+import SectionContainer from '~/components/common/SectionContainer.vue'
+import SectionTitle from '~/components/common/SectionTitle.vue'
 export default {
-  components: { OurProcess, WorksComponent },
+  components: { SectionTitle, SectionContainer },
   setup() {
     // images shown for works component, should probs be fetched from backend
     // one issue i see for mobile view (that also occurs with the Packages component) is that because the component has w-11/12, it can sometimes look oddly clipped off
@@ -131,8 +142,29 @@ export default {
   },
   data() {
     return {
-      Container,
+      apiData: null,
+      loading: true,
+      error: false,
     }
+  },
+  mounted() {
+    this.test()
+    console.log(`working`)
+  },
+  methods: {
+    async getData() {
+      try {
+        const { data } = await this.$axios(`/services`)
+        this.loading = false
+        console.log('res', data)
+        this.apiData = data
+      } catch (error) {
+        this.error = error
+      }
+    },
+    test() {
+      this.$store.dispatch('getServices')
+    },
   },
 }
 </script>
