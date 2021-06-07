@@ -24,7 +24,7 @@
         </div>
       </div>
     </section-container>
-    <Packages :data="apiData" />
+    <Packages />
     <!-- <OurProcess /> -->
   </div>
 </template>
@@ -148,7 +148,7 @@ export default {
     }
   },
   mounted() {
-    this.getData()
+    this.test()
     console.log(`working`)
   },
   methods: {
@@ -161,6 +161,9 @@ export default {
       } catch (error) {
         this.error = error
       }
+    },
+    test() {
+      this.$store.dispatch('getServices')
     },
   },
 }
