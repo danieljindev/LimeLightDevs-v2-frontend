@@ -9,9 +9,11 @@
 </template>
 
 <script>
+import Packages from '~/components/packages/Packages.vue'
 import OurProcess from '~/components/process/OurProcess.vue'
+import WorksComponent from '~/components/works/WorksComponent.vue'
 export default {
-  components: { OurProcess },
+  components: { OurProcess, Packages, WorksComponent },
   data() {
     return {
       apiData: null,
