@@ -124,7 +124,18 @@
               <input
                 v-model="form.email"
                 required
-                class="bg-app-gray-1 p-4 text-lg rounded-xl text-app-gray-3 placeholder-app-gray-3 font-bold outline-none border-2 border-transparent focus:border-app-green-1"
+                class="
+                  bg-app-gray-1
+                  p-4
+                  text-lg
+                  rounded-xl
+                  text-app-gray-3
+                  placeholder-app-gray-3
+                  font-bold
+                  outline-none
+                  border-2 border-transparent
+                  focus:border-app-green-1
+                "
                 placeholder="Write your email here"
               />
             </div>
@@ -132,7 +143,18 @@
               <label class="text-lg font-bold mb-2">Phone Number</label>
               <input
                 v-model="form.phone"
-                class="bg-app-gray-1 p-4 text-lg rounded-xl text-app-gray-3 placeholder-app-gray-3 font-bold outline-none border-2 border-transparent focus:border-app-green-1"
+                class="
+                  bg-app-gray-1
+                  p-4
+                  text-lg
+                  rounded-xl
+                  text-app-gray-3
+                  placeholder-app-gray-3
+                  font-bold
+                  outline-none
+                  border-2 border-transparent
+                  focus:border-app-green-1
+                "
                 placeholder="Write your Phone Number"
               />
             </div>
@@ -201,8 +223,6 @@ export default {
     })
 
     function submit(e) {
-      console.log(form.fullname, form.reason, form.message, form.email, form.phone)
-
       // clear form values (tried using e.target.reset(), but it doesn't update reactive form values)
       Object.keys(form).forEach((key, value) => (form[key] = ''))
     }

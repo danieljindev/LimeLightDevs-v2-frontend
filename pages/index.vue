@@ -23,14 +23,12 @@ export default {
   },
   mounted() {
     this.test()
-    console.log(`working`)
   },
   methods: {
     async getData() {
       try {
         const { data } = await this.$axios(`/services`)
         this.loading = false
-        console.log('res', data)
         this.apiData = data
       } catch (error) {
         this.error = error
