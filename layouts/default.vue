@@ -24,7 +24,10 @@
 
 <script>
 import { onMounted, ref } from '@nuxtjs/composition-api'
+import Footer from '~/components/layout/Footer.vue'
+
 export default {
+  components: { Footer },
   setup() {
     const footerHeight = ref(0)
     function setFooterHeight() {
