@@ -5,7 +5,6 @@ export const state = () => ({
 // Getters
 export const getters = {
   services(state) {
-    console.log(`state.services`, state.services)
     return state.services
   },
 }
@@ -18,7 +17,6 @@ export const actions = {
       const { data } = await this.$axios.get('/services')
       // context.commit('setLoading', false)
       context.commit('addServices', data)
-      console.log('TEST', data)
       return data
     } catch (error) {
       this.error = error

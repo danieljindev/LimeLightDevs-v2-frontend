@@ -21,7 +21,7 @@ const actions = {
     } catch (error) {
       // Error 😨
       commit('getProjectsError', 'Error while fetching projects!')
-      console.log(error)
+      console.log(error) //eslint-disable-line
     }
   },
 }

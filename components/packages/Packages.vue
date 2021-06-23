@@ -74,8 +74,6 @@ export default {
       if (this.services != null) {
         return this.services.find((item) => {
           if (item.title === this.activeService) {
-            console.log(item)
-            console.log(`item.title`, item.title)
             return true
           }
           return false
@@ -83,7 +81,6 @@ export default {
       } else return null
     },
     services() {
-      console.log(`this.$store.getters.services`, this.$store.getters.services)
       return this.$store.getters.services
     },
   },
