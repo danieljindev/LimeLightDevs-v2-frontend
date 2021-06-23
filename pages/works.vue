@@ -1,16 +1,20 @@
 <template>
   <div class="w-full z-20">
-    <PageHeader :pageTitle="pageTitle" :description="description" :link="link" :linkTitle="linkTitle" />
+    <PageHeader
+      :pageTitle="pageTitle"
+      :description="description"
+      :link="link"
+      :linkTitle="linkTitle"
+    />
     <WorksComponent />
-    <Footer />
   </div>
 </template>
 
 <script>
 import PageHeader from '~/components/common/PageHeader.vue'
-import Footer from '~/components/layout/Footer.vue'
+
 export default {
-  components: { PageHeader, Footer },
+  components: { PageHeader },
   data() {
     return {
       pageTitle: 'Works',
