@@ -89,6 +89,11 @@ export default {
     PackagesCarousel,
     ServiceCard,
   },
+  async fetch() {
+    const { store, $axios } = this.$nuxt.context
+    const { data } = await $axios('/services')
+    store.commit('addServices', data)
+  },
   data() {
     const settings = {
       dots: false,
@@ -118,16 +123,7 @@ export default {
       return this.$store.getters.services
     },
   },
-  mounted() {
-    this.$store.dispatch('getServices')
-  },
 }
 </script>
 
-<style scoped>
-/* @media (min-width: 1024px) {
-  .package {
-    min-width: 0;
-  }
-} */
-</style>
+<style scoped></style>
