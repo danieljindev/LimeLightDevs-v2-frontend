@@ -1,37 +1,57 @@
 <template>
-  <section-container class="mb-56">
-    <div class="md:flex justify-between items-center mb-4">
+  <section-container :default-margins="false">
+    <div class="md:flex justify-between items-center">
       <section-title
-        class="mb-3 text-4xl font-semibold tracking-wide text-left 2xl:text-5xl"
+        class="text-4xl font-semibold tracking-wide text-left 2xl:text-5xl"
         >Our Packages</section-title
       >
-      <!-- TABS -->
-      <ul
-        v-if="services"
-        class="
-          flex
-          justify-end
-          items-center
-          text-center
-          font-bold
-          mr-4
-          space-x-4
-          text-md
-          lg:space-x-12
-        "
-      >
-        <li v-for="item in services" :key="item.id">
-          <a
-            class="cursor-pointer text-lg"
-            :class="[
-              getActiveServices.title === item.title ? 'text-app-green-1' : '',
-            ]"
-            @click="activeService = item.title"
-            >{{ item.title }}
-          </a>
-        </li>
-      </ul>
-      <!-- END TABS -->
+      <div class="hidden sm:block">
+        <!-- TABS -->
+        <ul
+          v-if="services"
+          class="
+            flex
+            justify-end
+            items-center
+            text-center
+            font-bold
+            mr-4
+            space-x-4
+            text-md
+            lg:space-x-12
+          "
+        >
+          <li v-for="item in services" :key="item.id">
+            <a
+              class="cursor-pointer text-lg"
+              :class="[
+                getActiveServices.title === item.title
+                  ? 'text-app-green-1'
+                  : '',
+              ]"
+              @click="activeService = item.title"
+              >{{ item.title }}
+            </a>
+          </li>
+        </ul>
+        <!-- END TABS -->
+      </div>
+      <div class="sm:hidden">
+        <!-- TABS -->
+        <div class="md:w-1/2">
+          <VueSlickCarousel v-if="services" v-bind="settings">
+            <span
+              v-for="item in services"
+              :key="item.id"
+              class="cursor-pointer mx-4"
+              @click="activeService = item.title"
+            >
+              {{ item.title }}
+            </span>
+          </VueSlickCarousel>
+        </div>
+        <!-- END TABS -->
+      </div>
     </div>
 
     <div v-if="getActiveServices != null" class="">
@@ -43,9 +63,9 @@
           v-for="(item, index) in getActiveServices.packages"
           :key="item.id"
           :service="item"
-          :isFirstItem="index === 0"
-          :isLastItem="index === getActiveServices.packages.length - 1"
-          :isCarousel="false"
+          :is-first-item="index === 0"
+          :is-last-item="index === getActiveServices.packages.length - 1"
+          :is-carousel="false"
         />
       </div>
     </div>
@@ -53,19 +73,33 @@
 </template>
 
 <script>
+import VueSlickCarousel from 'vue-slick-carousel'
+import 'vue-slick-carousel/dist/vue-slick-carousel.css'
+import 'vue-slick-carousel/dist/vue-slick-carousel-theme.css'
 import SectionContainer from '../common/SectionContainer.vue'
 import SectionTitle from '../common/SectionTitle.vue'
 import PackagesCarousel from './PackagesCarousel.vue'
 import ServiceCard from './ServiceCard.vue'
+
 export default {
   components: {
+    VueSlickCarousel,
     SectionContainer,
     SectionTitle,
     PackagesCarousel,
     ServiceCard,
   },
   data() {
+    const settings = {
+      dots: false,
+      arrows: false,
+      infinite: false,
+      variableWidth: true,
+      slidesToScroll: 1,
+    }
+
     return {
+      settings,
       activeService: 'Web Development',
     }
   },
