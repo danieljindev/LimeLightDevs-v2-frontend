@@ -1,7 +1,7 @@
 <template>
   <div
     class="container navbar py-8 px-6 xl:px-48 2xl:px-4"
-    :class="{ 'navbar--unpinned': scrolled }"
+    :class="{ 'navbar--unpinned': scrolled, 'shadow-xl': scrolled }"
   >
     <!-- so navbar always takes priority, will actually be absolute in the future for a few reasons -->
     <div class="flex items-center justify-between relative z-40">
@@ -59,6 +59,7 @@ export default {
 <style>
 .navbar {
   position: fixed;
+  background: rgb(26, 26, 26);
   z-index: 29;
   padding-right: 4%;
   padding-left: 4%;
@@ -69,7 +70,7 @@ export default {
   transform: translateY(0%);
 }
 .navbar--unpinned {
-  background: rgb(0, 0, 0, 0.7);
+  background: rgb(34, 34, 34);
   padding-top: 1rem;
   padding-bottom: 1rem;
 }
