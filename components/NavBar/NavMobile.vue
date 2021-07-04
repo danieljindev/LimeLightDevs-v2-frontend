@@ -17,6 +17,7 @@
     <!-- Navigation drawer -->
     <aside
       :class="isHamburgerActive ? 'translate-x-0' : 'translate-x-full'"
+      v-click-outside="onClickOutside"
       class="
         transform
         top-0
@@ -142,6 +143,11 @@ export default {
       } else {
         el.classList.remove(className)
       }
+    },
+    onClickOutside(event) {
+      this.isHamburgerActive = false
+      this.toggleBodyClass(this.isHamburgerActive, 'overflow-hidden')
+      // if (event.target.type !== 'submit') this.$emit('close')
     },
   },
 }
