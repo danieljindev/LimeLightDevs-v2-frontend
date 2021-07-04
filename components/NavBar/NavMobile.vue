@@ -96,6 +96,7 @@
       <span
         class="block bg-white w-6 h-1 my-1 mx-auto ease-in-out duration-300"
         :class="{ 'transform -translate-y-2 -rotate-45': isHamburgerActive }"
+        id="close-button"
       ></span>
     </div>
   </nav>
@@ -145,9 +146,10 @@ export default {
       }
     },
     onClickOutside(event) {
-      this.isHamburgerActive = false
-      this.toggleBodyClass(this.isHamburgerActive, 'overflow-hidden')
-      // if (event.target.type !== 'submit') this.$emit('close')
+      if (event.target.id !== 'close-button') {
+        this.isHamburgerActive = false
+        this.toggleBodyClass(this.isHamburgerActive, 'overflow-hidden')
+      }
     },
   },
 }
