@@ -68,7 +68,7 @@
               duration-200
               focus:outline-none
             "
-            @click.native="onClickHandler"
+            @click="onClickHandler"
           >
             <a :href="link.href">{{ link.name }}</a>
           </button>
