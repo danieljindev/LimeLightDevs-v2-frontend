@@ -59,7 +59,6 @@ export default {
 <style>
 .navbar {
   position: fixed;
-  background: rgb(26, 26, 26);
   z-index: 29;
   padding-right: 4%;
   padding-left: 4%;
