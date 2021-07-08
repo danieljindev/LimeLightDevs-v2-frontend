@@ -39,6 +39,7 @@
         <li v-for="link in navLinks" :key="link.name" class="my-3">
           <nuxt-link
             v-if="!link.button"
+            v-on:click.native="onClickHandler"
             :to="link.href"
             class="
               text-xl
@@ -150,6 +151,10 @@ export default {
         this.isHamburgerActive = false
         this.toggleBodyClass(this.isHamburgerActive, 'overflow-hidden')
       }
+    },
+    onClickHandler(event) {
+      this.isHamburgerActive = false
+      this.toggleBodyClass(this.isHamburgerActive, 'overflow-hidden')
     },
   },
 }
