@@ -1,16 +1,14 @@
 <template>
-  <section-container :default-margins="false">
-    <VueSlickCarousel ref="carousel" v-bind="settings" :key="carouselKey">
-      <service-card
-        v-for="(item, index) in services"
-        :key="item.id"
-        :service="item"
-        :is-first-item="index === 0"
-        :is-last-item="index === services.length - 1"
-        :is-carousel="true"
-      />
-    </VueSlickCarousel>
-  </section-container>
+  <VueSlickCarousel v-bind="settings" ref="carousel">
+    <service-card
+      v-for="(item, index) in services"
+      :key="item.id"
+      :service="item"
+      :isFirstItem="index === 0"
+      :isLastItem="index === services.length - 1"
+      :isCarousel="true"
+    />
+  </VueSlickCarousel>
 </template>
 
 <script>

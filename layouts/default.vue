@@ -1,7 +1,7 @@
 <template>
   <div class="min-h-screen text-white bg-app-gray-1 relative">
     <NavBar />
-    <div :style="`padding-bottom:${footerHeight}px`">
+    <div :style="`padding-bottom:${footerHeight}px; padding-top: 100px;`">
       <Nuxt />
       <Contact />
       <!-- blob background (found in Contact) -->

@@ -18,6 +18,7 @@
     <aside
       v-click-outside="onClickOutside"
       :class="isHamburgerActive ? 'translate-x-0' : 'translate-x-full'"
+      v-click-outside="onClickOutside"
       class="
         transform
         top-0
@@ -99,6 +100,7 @@
         id="close-button"
         class="block bg-white w-6 h-1 my-1 mx-auto ease-in-out duration-300"
         :class="{ 'transform -translate-y-2 -rotate-45': isHamburgerActive }"
+        id="close-button"
       ></span>
     </div>
   </nav>
