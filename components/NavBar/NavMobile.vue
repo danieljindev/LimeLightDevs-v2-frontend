@@ -16,8 +16,8 @@
     ></div>
     <!-- Navigation drawer -->
     <aside
-      :class="isHamburgerActive ? 'translate-x-0' : 'translate-x-full'"
       v-click-outside="onClickOutside"
+      :class="isHamburgerActive ? 'translate-x-0' : 'translate-x-full'"
       class="
         transform
         top-0
@@ -39,7 +39,6 @@
         <li v-for="link in navLinks" :key="link.name" class="my-3">
           <nuxt-link
             v-if="!link.button"
-            v-on:click.native="onClickHandler"
             :to="link.href"
             class="
               text-xl
@@ -48,6 +47,7 @@
               transition
               duration-200
             "
+            @click.native="onClickHandler"
           >
             {{ link.name }}
           </nuxt-link>
@@ -68,6 +68,7 @@
               duration-200
               focus:outline-none
             "
+            @click.native="onClickHandler"
           >
             <a :href="link.href">{{ link.name }}</a>
           </button>
@@ -95,9 +96,9 @@
         :class="{ 'opacity-0': isHamburgerActive }"
       ></span>
       <span
+        id="close-button"
         class="block bg-white w-6 h-1 my-1 mx-auto ease-in-out duration-300"
         :class="{ 'transform -translate-y-2 -rotate-45': isHamburgerActive }"
-        id="close-button"
       ></span>
     </div>
   </nav>
