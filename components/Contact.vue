@@ -1,5 +1,9 @@
 <template>
-  <section-container id="contact" class="relative z-10" :defaultMargins="false">
+  <section-container
+    id="contact"
+    class="relative z-10"
+    :default-margins="false"
+  >
     <div>
       <div
         class="
@@ -58,7 +62,7 @@
             src="/contact/unboggled.png"
           />
         </div>
-        <form
+        <div
           class="
             z-30
             flex
@@ -70,147 +74,45 @@
             pb-0
             lg:pb-8
           "
-          @submit.prevent="submit"
         >
-          <div
-            class="
-              w-full
-              flex flex-wrap flex-row
-              justify-start
-              items-center
-              px-8
-            "
+          <v-generic-form
+            :options="options"
+            :fields="fields"
+            @onSubmit="submit"
           >
-            <div class="flex flex-col pb-4 lg:pb-0 w-full lg:w-1/2 lg:pr-4">
-              <label class="text-lg mb-2">Name & Last Name</label>
-              <input
-                v-model="form.fullname"
-                class="
-                  bg-app-gray-1
-                  p-3
-                  text-lg
-                  rounded-xl
-                  text-app-gray-3
-                  placeholder-app-gray-3
-                  font-bold
-                  outline-none
-                  border-2 border-transparent
-                  focus:border-app-green-1
-                "
-                placeholder="Write your first & last name here"
-              />
-            </div>
-            <div class="flex flex-col w-full lg:w-1/2 lg:pl-4">
-              <label class="text-lg mb-2">Reason:</label>
-              <input
-                v-model="form.reason"
-                class="
-                  bg-app-gray-1
-                  p-3
-                  text-lg
-                  rounded-xl
-                  text-app-gray-3
-                  placeholder-app-gray-3
-                  font-bold
-                  outline-none
-                  border-2 border-transparent
-                  focus:border-app-green-1
-                "
-                placeholder="Write your reason"
-              />
-            </div>
-            <div class="flex flex-col py-4 lg:pb-0 w-full lg:w-1/2 lg:pr-4">
-              <label class="text-lg mb-2">Email</label>
-              <input
-                v-model="form.email"
-                required
-                class="
-                  bg-app-gray-1
-                  p-3
-                  text-lg
-                  rounded-xl
-                  text-app-gray-3
-                  placeholder-app-gray-3
-                  font-bold
-                  outline-none
-                  border-2 border-transparent
-                  focus:border-app-green-1
-                "
-                placeholder="Write your email here"
-              />
-            </div>
-            <div class="flex flex-col w-full lg:w-1/2 lg:pl-4">
-              <label class="text-lg mb-2">Phone Number</label>
-              <input
-                v-model="form.phone"
-                class="
-                  bg-app-gray-1
-                  p-3
-                  text-lg
-                  rounded-xl
-                  text-app-gray-3
-                  placeholder-app-gray-3
-                  font-bold
-                  outline-none
-                  border-2 border-transparent
-                  focus:border-app-green-1
-                "
-                placeholder="Write your Phone Number"
-              />
-            </div>
-          </div>
-          <div class="flex flex-col mx-8 mt-2">
-            <label class="text-lg mb-2">Write your message:</label>
-            <textarea
-              v-model="form.message"
-              class="
-                bg-app-gray-1
-                p-3
-                text-lg
-                rounded-xl
-                text-app-gray-3
-                placeholder-app-gray-3
-                font-bold
-                resize-none
-                outline-none
-                border-2 border-transparent
-                focus:border-app-green-1
-              "
-              rows="6"
-              placeholder="Write your message"
-            />
-          </div>
-          <div class="m-6 flex justify-center">
-            <button
-              type="submit"
-              class="
-                px-12
-                py-2
-                font-bold
-                text-xl text-app-green-1
-                hover:text-white
-                border-4 border-app-green-1
-                hover:bg-app-green-1
-                rounded-full
-                focus:outline-none
-                transition
-                ease-in-out
-                duration-300
-              "
-            >
-              Send message
-            </button>
-          </div>
-        </form>
+            <template slot="submit">
+              <div class="m-6 flex justify-center w-full">
+                <button
+                  type="submit"
+                  class="
+                    px-12
+                    py-2
+                    font-bold
+                    text-xl text-app-green-1
+                    hover:text-white
+                    border-4 border-app-green-1
+                    hover:bg-app-green-1
+                    rounded-full
+                    focus:outline-none
+                    transition
+                    ease-in-out
+                    duration-300
+                  "
+                >
+                  Send message
+                </button>
+              </div>
+            </template>
+          </v-generic-form>
+        </div>
       </div>
     </div>
   </section-container>
 </template>
 
 <script>
-import { reactive } from '@nuxtjs/composition-api'
+import { computed, reactive } from '@nuxtjs/composition-api'
 import SectionContainer from './common/SectionContainer.vue'
-
 export default {
   components: { SectionContainer },
   setup() {
@@ -221,13 +123,75 @@ export default {
       phone: '',
       message: '',
     })
-
-    function submit(e) {
+    const fields = computed(() => [
+      {
+        name: 'fullName',
+        placeholder: 'Write your first & last name here',
+        label: 'Name & Last Name',
+        divClass: 'flex flex-col pb-4 lg:pb-0 w-full lg:w-1/2 lg:pr-4',
+        rules: {
+          required: true,
+        },
+      },
+      {
+        name: 'reason',
+        placeholder: 'Write your reason',
+        label: 'Reason',
+        rules: {
+          required: true,
+        },
+      },
+      {
+        name: 'email',
+        placeholder: 'Write your email here',
+        label: 'Email',
+        rules: {
+          required: true,
+          email: {
+            message: `^Please enter a valid email.`,
+          },
+        },
+      },
+      {
+        name: 'phone',
+        placeholder: 'Phone Number',
+        label: 'Write your phone number',
+        rules: {
+          presence: false,
+          format: {
+            pattern:
+              // eslint-disable-next-line no-useless-escape
+              /^$|[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/im,
+            flags: 'i',
+            message: '^Please enter a valid phone number.',
+            allowEmpty: true,
+          },
+        },
+      },
+      {
+        name: 'message',
+        placeholder: 'Write your message',
+        variant: 'CustomTextArea',
+        label: 'Message',
+        divClass: 'w-full',
+        parentClass: 'mt-2 w-full lg:pr-4',
+        rules: {
+          required: true,
+        },
+      },
+    ])
+    function submit(data) {
+      console.log(`data`, data)
       // clear form values (tried using e.target.reset(), but it doesn't update reactive form values)
       Object.keys(form).forEach((key, value) => (form[key] = ''))
     }
-
-    return { form, submit }
+    const options = {
+      formClass:
+        'w-full flex flex-wrap flex-row justify-start items-center px-8',
+      divClasses: 'flex flex-col pb-4 lg:pb-0 w-full lg:w-1/2 lg:pr-4',
+      // parentClasses: 'flex flex-col pb-4 lg:pb-0 w-full lg:w-1/2 lg:pr-4',
+    }
+    return { form, submit, fields, options }
   },
 }
 </script>

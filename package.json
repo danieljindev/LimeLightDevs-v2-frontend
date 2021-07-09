@@ -16,6 +16,7 @@
     "core-js": "^3.6.5",
     "nuxt": "^2.15.3",
     "v-click-outside": "^3.1.2",
+    "v-generic-form-vue2": "^1.0.25",
     "vue-slick-carousel": "^1.0.6"
   },
   "devDependencies": {
