@@ -52,4 +52,7 @@ export default {
     },
     transpile: ['v-click-outside']
   },
+  server: {
+    host: "0.0.0.0"
+  }
 }
