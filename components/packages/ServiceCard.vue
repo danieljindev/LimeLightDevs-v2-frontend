@@ -16,6 +16,7 @@
       2xl:px-10
       py-8
       shadow-2xl
+      z-10
     "
   >
     <img class="mb-6 mx-auto" src="/packages/desktop.png" alt="desktop.png" />
@@ -37,7 +38,7 @@
     <Button variant="two">Order Package</Button>
     <p class="mt-4">
       Edit request?
-      <a class="font-medium text-app-green-1" href="/#contact">Contact us</a>
+      <a class="font-medium text-app-green-1" href="#contact">Contact us</a>
     </p>
   </div>
 </template>
