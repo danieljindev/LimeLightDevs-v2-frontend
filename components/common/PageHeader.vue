@@ -9,6 +9,7 @@
     </div>
     <div
       class="
+        page-header
         text-white
         w-full
         md:w-9/12
@@ -71,3 +72,10 @@ export default {
   },
 }
 </script>
+<style scoped>
+@media (min-width: 1700px) {
+  .page-header {
+    margin-left: 11rem;
+  }
+}
+</style>
