@@ -1,5 +1,17 @@
 <template>
-  <div class="relative w-full flex justify-center">
+  <div
+    class="
+      relative
+      w-full
+      flex
+      justify-center
+      mx-auto
+      px-0
+      lg:px-10
+      xl:px-16
+      2xl:px-32
+    "
+  >
     <div
       class="
         z-10

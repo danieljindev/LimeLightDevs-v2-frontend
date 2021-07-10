@@ -1,10 +1,10 @@
 <template>
   <div class="w-full z-20">
     <PageHeader
-      :pageTitle="pageTitle"
+      :page-title="pageTitle"
       :description="description"
       :link="link"
-      :linkTitle="linkTitle"
+      :link-title="linkTitle"
     />
     <WorksComponent />
   </div>
@@ -22,6 +22,11 @@ export default {
         'Lorem ipsum dolor sit amet consectetur adipiscing elit, fames semper vehicula velit dapibus in iaculis. Eros cursus lobortis leo hendrerit faucibus parturient sagittis justo curabitur lacinia ridiculus class.',
       link: '/packages',
       linkTitle: 'Check our packages',
+    }
+  },
+  head() {
+    return {
+      title: this.pageTitle,
     }
   },
 }

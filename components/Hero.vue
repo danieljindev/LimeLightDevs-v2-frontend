@@ -11,6 +11,7 @@
     <!-- probably be best to just include one image rather than style a bunch on top of each other -->
     <div
       class="
+        page-header
         relative
         w-full
         lg:w-1/2
@@ -89,3 +90,10 @@
     </div>
   </div>
 </template>
+<style scoped>
+@media (min-width: 1700px) {
+  .page-header {
+    margin-left: 18rem;
+  }
+}
+</style>
