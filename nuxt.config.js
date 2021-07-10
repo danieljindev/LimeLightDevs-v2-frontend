@@ -17,7 +17,7 @@ export default {
   css: [],
 
   // Plugins to run before rendering page (https://go.nuxtjs.dev/config-plugins)
-  plugins: ['~/plugins/v-click-outside.js'],
+  plugins: ['~/plugins/v-click-outside.js', '~/plugins/v-generic-form'],
 
   // Auto import components (https://go.nuxtjs.dev/config-components)
   components: true,
@@ -44,13 +44,16 @@ export default {
   tailwindcss: {
     jit: true,
   },
-
+  pageTransition: {
+    name: 'page-fade',
+    mode: 'out-in',
+  },
   // Build Configuration (https://go.nuxtjs.dev/config-build)
   build: {
     babel: {
       plugins: [['@babel/plugin-proposal-private-methods', { loose: true }]],
     },
-    transpile: ['v-click-outside']
+    transpile: ['v-click-outside'],
   },
   server: {
     host: "0.0.0.0"

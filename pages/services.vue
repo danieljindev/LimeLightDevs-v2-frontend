@@ -24,6 +24,9 @@ export default {
       linkTitle: 'Check our packages',
     }
   },
+    head() {
+    return {
+      title: 'Services',
 }
 </script>
 
