@@ -1,30 +1,31 @@
 <template>
-  <transition name="modal-fade">
-    <div class="modal-backdrop z-30">
-      <div
-        class="modal bg-app-gray-1 rounded-md lg:w-5/6 p-3 h-full md:h-auto"
-        role="dialog"
-        aria-labelledby="modalTitle"
-        aria-describedby="modalDescription"
-        v-click-outside="onClickOutside"
-      >
-        <header id="modalTitle" class="modal-header">
-          <button
-            type="button"
-            class="btn-close"
-            aria-label="Close modal"
-            @click="close"
-          >
-            x
-          </button>
-        </header>
-
-        <section id="modalDescription" class="modal-body">
-          <slot name="body"> This is the default body! </slot>
-        </section>
+  <div>
+    <transition name="modal-fade">
+      <div class="fixed flex justify-center inset-0 items-center z-30">
+        <div
+          class="modal bg-app-gray-1 rounded-md lg:w-5/6 p-3 h-full md:h-auto"
+          role="dialog"
+          aria-labelledby="modalTitle"
+          aria-describedby="modalDescription"
+          v-click-outside="onClickOutside"
+        >
+          <header id="modalTitle" class="modal-header">
+            <button
+              type="button"
+              class="btn-close"
+              aria-label="Close modal"
+              @click="close"
+            >
+              x
+            </button>
+          </header>
+          <section id="modalDescription" class="modal-body">
+            <slot name="body"> This is the default body! </slot>
+          </section>
+        </div>
       </div>
-    </div>
-  </transition>
+    </transition>
+  </div>
 </template>
 
 <script>
