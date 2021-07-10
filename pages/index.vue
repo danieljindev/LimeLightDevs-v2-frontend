@@ -14,6 +14,11 @@ import OurProcess from '~/components/process/OurProcess.vue'
 import WorksComponent from '~/components/works/WorksComponent.vue'
 export default {
   components: { OurProcess, Packages, WorksComponent },
+  head() {
+    return {
+      title: 'Landing Page',
+    }
+  },
 }
 </script>
 
