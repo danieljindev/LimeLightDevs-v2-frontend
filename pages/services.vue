@@ -1,10 +1,10 @@
 <template>
   <div class="w-full z-20">
     <PageHeader
-      :pageTitle="pageTitle"
+      :page-title="pageTitle"
       :description="description"
       :link="link"
-      :linkTitle="linkTitle"
+      :link-title="linkTitle"
     />
     <Services />
   </div>
@@ -24,9 +24,11 @@ export default {
       linkTitle: 'Check our packages',
     }
   },
-    head() {
+  head() {
     return {
       title: 'Services',
+    }
+  },
 }
 </script>
 
