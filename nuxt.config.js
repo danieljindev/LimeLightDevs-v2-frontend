@@ -45,7 +45,7 @@ export default {
     jit: true,
   },
   pageTransition: {
-    name: 'fade',
+    name: 'page-fade',
     mode: 'out-in',
   },
   // Build Configuration (https://go.nuxtjs.dev/config-build)

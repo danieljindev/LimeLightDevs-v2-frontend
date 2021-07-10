@@ -58,7 +58,7 @@ html {
 }
 .page-fade-enter-active,
 .page-fade-leave-active {
-  transition: opacity 0.25s;
+  transition: opacity 0.28s ease;
 }
 
 .page-fade-enter,
