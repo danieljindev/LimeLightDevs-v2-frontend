@@ -78,7 +78,8 @@
           <v-generic-form
             :options="options"
             :fields="fields"
-            @onSubmit="submit"
+            hide-errors
+            @submit="submit"
           >
             <template slot="submit">
               <div class="m-6 flex justify-center w-full">
@@ -188,7 +189,7 @@ export default {
     const options = {
       formClass:
         'w-full flex flex-wrap flex-row justify-start items-center px-8',
-      divClasses: 'flex flex-col pb-4 lg:pb-0 w-full lg:w-1/2 lg:pr-4',
+      divClasses: 'flex flex-col pb-4 lg:pb-0 w-full lg:w-1/2 lg:pr-4 mb-2',
       // parentClasses: 'flex flex-col pb-4 lg:pb-0 w-full lg:w-1/2 lg:pr-4',
     }
     return { form, submit, fields, options }
