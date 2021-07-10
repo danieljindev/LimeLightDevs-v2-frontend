@@ -44,7 +44,10 @@ export default {
   tailwindcss: {
     jit: true,
   },
-
+  pageTransition: {
+    name: 'fade',
+    mode: 'out-in',
+  },
   // Build Configuration (https://go.nuxtjs.dev/config-build)
   build: {
     babel: {

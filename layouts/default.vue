@@ -56,4 +56,24 @@ html {
   font-family: 'Roboto', sans-serif;
   scroll-behavior: smooth;
 }
+.page-fade-enter-active,
+.page-fade-leave-active {
+  transition: opacity 0.25s;
+}
+
+.page-fade-enter,
+.page-fade-leave-to {
+  opacity: 0;
+}
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.35s;
+}
+
+.fade-enter,
+.fade-leave-to
+
+/* .fade-leave-active below version 2.1.8 */ {
+  opacity: 0;
+}
 </style>
