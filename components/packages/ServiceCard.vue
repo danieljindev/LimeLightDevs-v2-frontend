@@ -2,22 +2,10 @@
   <div
     :class="[
       isCarousel ? 'rounded-2xl' : '',
-      !isCarousel & isFirstItem ? 'rounded-l-2xl' : '',
-      !isCarousel & isLastItem ? 'rounded-r-2xl' : '',
+      !isCarousel && isFirstItem ? 'rounded-l-2xl' : '',
+      !isCarousel && isLastItem ? 'rounded-r-2xl' : '',
     ]"
-    class="
-      w-3/12
-      bg-app-gray-2
-      flex flex-col
-      text-center
-      items-center
-      justify-between
-      px-8
-      2xl:px-10
-      py-8
-      shadow-2xl
-      z-10
-    "
+    class="w-3/12 bg-app-gray-2 flex flex-col text-center items-center justify-between px-8 2xl:px-10 py-8 shadow-2xl z-10"
   >
     <img class="mb-6 mx-auto" src="/packages/desktop.png" alt="desktop.png" />
     <h1 class="font-bold text-2xl mb-2">{{ service.title }}</h1>
@@ -35,16 +23,17 @@
       </p>
       <p class="text-3xl font-bold text-app-green-1">${{ service.newPrice }}</p>
     </div>
-    <Button
+    <a
+      href="#contact"
       class="hover:text-app-green-1 duration-100"
       variant="two"
-      @click="
+      @click.stop="
         $store.commit('setContact', {
           message: `I'd to order the ${service.title} package.`,
           reason: `${service.title} Package.`,
         })
       "
-      >Order Package</Button
+      >Order Package</a
     >
     <p class="mt-4">
       Edit request?
