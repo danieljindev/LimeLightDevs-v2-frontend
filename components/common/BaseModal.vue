@@ -1,14 +1,24 @@
 <template>
   <div>
     <overlay :is-open="isOpen" />
-    <transition name="fade">
+    <transition name="scale">
       <div
         v-if="isOpen"
         class="fixed flex justify-center inset-0 items-center z-40"
       >
         <div
           v-click-outside="onClickOutside"
-          class="modal bg-app-gray-1 rounded-md lg:w-5/6 p-3 h-full md:h-auto"
+          class="
+            modal
+            bg-app-gray-1
+            rounded-md
+            lg:w-5/6
+            p-3
+            h-full
+            md:h-[54%]
+            lg:h-2/5
+            xl:h-2/3
+          "
           role="dialog"
           aria-labelledby="modalTitle"
           aria-describedby="modalDescription"
@@ -28,7 +38,7 @@
               x
             </button>
           </header>
-          <section id="modalDescription" class="modal-body">
+          <section id="modalDescription" class="modal-body h-full">
             <slot name="body"> This is the default body! </slot>
           </section>
         </div>

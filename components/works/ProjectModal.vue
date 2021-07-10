@@ -1,7 +1,7 @@
 <template>
   <div>
     <Modal :is-open="isModalVisible" @close="closeModal">
-      <template v-if="project" v-slot:body>
+      <template v-slot:body>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-14 px-8">
           <div class="left-side">
             <div>
@@ -77,7 +77,7 @@
                   Visit Website
                 </a>
               </div> -->
-              <div class="absolute bottom-5 left-9">
+              <div class="absolute bottom-5">
                 <a
                   href="#"
                   class="
@@ -110,14 +110,15 @@
               </div>
             </div>
           </div>
+          <!-- band aid fix for issue with initial load of modal -->
           <VueSlickCarousel v-bind="settings">
             <div
               v-for="(image, index) in [1, 2, 3]"
               :key="index"
-              class="relative px-3 py-2 focus:outline-none"
+              class="relative px-3 py-2 focus:outline-none appear-in"
             >
               <img
-                :src="'/works/6.jpg'"
+                src="http://placeimg.com/640/480/people"
                 class="object-cover rounded-xl h-70 mx-auto"
                 draggable="false"
               />
@@ -155,7 +156,21 @@ export default {
 
     return {
       settings,
+      showCarousel: false,
     }
+  },
+  watch: {
+    isModalVisible(value) {
+      const vm = this
+      if (value) {
+        setTimeout(() => {
+          vm.showCarousel = true
+        }, 50)
+      } else {
+        vm.showCarousel = false
+      }
+      console.log(`value`, value)
+    },
   },
   computed: {
     isModalVisible: {
