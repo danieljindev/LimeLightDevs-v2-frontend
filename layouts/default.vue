@@ -76,4 +76,11 @@ html {
 /* .fade-leave-active below version 2.1.8 */ {
   opacity: 0;
 }
+.scale-enter-active,
+.scale-leave-active {
+  transition: all 0.2s;
+}
+.scale-enter, .scale-leave-to /* .fade-leave-active below version 2.1.8 */ {
+  transform: scale(0);
+}
 </style>

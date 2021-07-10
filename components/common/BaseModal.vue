@@ -1,18 +1,27 @@
 <template>
   <div>
-    <transition name="modal-fade">
-      <div class="fixed flex justify-center inset-0 items-center z-30">
+    <overlay :is-open="isOpen" />
+    <transition name="fade">
+      <div
+        v-if="isOpen"
+        class="fixed flex justify-center inset-0 items-center z-40"
+      >
         <div
+          v-click-outside="onClickOutside"
           class="modal bg-app-gray-1 rounded-md lg:w-5/6 p-3 h-full md:h-auto"
           role="dialog"
           aria-labelledby="modalTitle"
           aria-describedby="modalDescription"
-          v-click-outside="onClickOutside"
         >
           <header id="modalTitle" class="modal-header">
             <button
               type="button"
-              class="btn-close"
+              class="
+                btn-close
+                hover:text-red-600
+                duration-150
+                focus:text-red-600
+              "
               aria-label="Close modal"
               @click="close"
             >
@@ -29,16 +38,14 @@
 </template>
 
 <script>
+import Overlay from '../misc/Overlay.vue'
 export default {
   name: 'Modal',
-  computed: {
-    isModalVisible: {
-      get() {
-        return this.$store.state.works.isModalVisible
-      },
-      set(isModalVisible) {
-        this.$store.commit('works/setModalVisible', isModalVisible)
-      },
+  components: { Overlay },
+  props: {
+    isOpen: {
+      type: Boolean,
+      default: false,
     },
   },
   methods: {

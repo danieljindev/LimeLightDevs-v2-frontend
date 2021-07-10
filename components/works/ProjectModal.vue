@@ -1,6 +1,6 @@
 <template>
   <div>
-    <Modal v-show="isModalVisible" @close="closeModal">
+    <Modal :is-open="isModalVisible" @close="closeModal">
       <template v-if="project" v-slot:body>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-14 px-8">
           <div class="left-side">
@@ -55,7 +55,8 @@
                   </button>
                 </div>
               </div>
-              <div class="mt-20">
+
+              <!-- <div class="mt-20">
                 <a
                   href="/"
                   target="_blank"
@@ -74,6 +75,37 @@
                   "
                 >
                   Visit Website
+                </a>
+              </div> -->
+              <div class="absolute bottom-5 left-9">
+                <a
+                  href="#"
+                  class="
+                    relative
+                    inline-flex
+                    justify-center
+                    items-center
+                    px-3
+                    py-2
+                    md:px-6
+                    xl:py-3.5
+                    group
+                    text-xs
+                    sm:text-base
+                  "
+                >
+                  <p class="relative z-10">Visit Website</p>
+                  <div
+                    class="
+                      absolute
+                      bg-app-green-1
+                      inset-x-0
+                      bottom-0
+                      h-[10%]
+                      duration-150
+                      group-hover:h-full
+                    "
+                  ></div>
                 </a>
               </div>
             </div>

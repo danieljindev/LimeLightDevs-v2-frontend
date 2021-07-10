@@ -45,7 +45,7 @@
         "
         @click="selectProject(work._id)"
       >
-        Visit site
+        View Site
       </button>
     </div>
   </div>
