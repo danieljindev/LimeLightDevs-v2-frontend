@@ -17,7 +17,7 @@
             h-full
             md:h-[54%]
             lg:h-2/5
-            xl:h-2/3
+            xl:h-[70%]
           "
           role="dialog"
           aria-labelledby="modalTitle"

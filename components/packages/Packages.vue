@@ -1,10 +1,8 @@
 <template>
   <section-container :default-margins="false">
-    <div class="md:flex justify-between items-center">
-      <section-title
-        class="text-4xl md:text-6xl font-semibold tracking-wide text-left px-4"
-        >Our Packages</section-title
-      >
+    <div class="md:flex flex-wrap justify-between items-center">
+      <section-title text="Our Packages" />
+
       <div class="hidden sm:block z-10">
         <!-- TABS -->
         <ul

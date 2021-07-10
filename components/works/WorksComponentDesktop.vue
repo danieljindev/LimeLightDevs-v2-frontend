@@ -1,8 +1,25 @@
 <template>
-  <section-container class="relative z-[1] hidden sm:block" :default-margins="false">
+  <section-container
+    class="relative z-[1] hidden sm:block"
+    :default-margins="false"
+  >
     <section-title text="Our Works" />
-    <div class="sm:flex flex-wrap items-stretch rounded-2xl overflow-hidden relative hidden">
-      <div v-for="work in projects" :key="work.id" class="w-1/4">
+    <div
+      class="
+        sm:flex
+        flex-wrap
+        items-stretch
+        rounded-2xl
+        overflow-hidden
+        relative
+        hidden
+      "
+    >
+      <div
+        v-for="work in projects"
+        :key="work.id"
+        class="w-1/2 lg:w-1/3 xl:w-1/4"
+      >
         <works-card :work="work" />
       </div>
     </div>

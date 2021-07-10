@@ -1,6 +1,6 @@
 <template>
   <div class="w-full z-20">
-    <div class="absolute right-0 top-28 w-2/6">
+    <div class="absolute hidden lg:block right-0 top-28 w-2/6">
       <img class="block w-full h-full transform" src="greenblob02.png" alt="" />
     </div>
     <ServiceCarousel />
