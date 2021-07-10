@@ -35,10 +35,24 @@
       </p>
       <p class="text-3xl font-bold text-app-green-1">${{ service.newPrice }}</p>
     </div>
-    <Button variant="two">Order Package</Button>
+    <Button
+      class="hover:text-app-green-1 duration-100"
+      variant="two"
+      @click="
+        $store.commit('setContact', {
+          message: `I'd to order the ${service.title} package.`,
+          reason: `${service.title} Package.`,
+        })
+      "
+      >Order Package</Button
+    >
     <p class="mt-4">
       Edit request?
-      <a class="font-medium text-app-green-1" href="#contact">Contact us</a>
+      <a
+        class="font-medium text-app-green-1 hover:opacity-[.77] duration-100"
+        href="#contact"
+        >Contact us</a
+      >
     </p>
   </div>
 </template>
