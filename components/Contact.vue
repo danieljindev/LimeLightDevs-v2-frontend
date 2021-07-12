@@ -181,7 +181,26 @@ export default {
         },
       },
     ])
-    function submit(data) {
+    async function submit(data) {
+      try {
+        const res = await this.$axios.post(
+          `https://limelightdevs.herokuapp.com/email`,
+          {
+            to: 'limelightdevs@gmail.com',
+            from: 'limelightdevs@gmail.com',
+            html: `
+            Hello from ${fullName}, I'd like to speak with you.
+            ${message}
+
+            My email is ${data.email} and number is ${data.phone || 'not sent.'}
+            `,
+            subject: data.reason,
+          }
+        )
+        console.log(`res.data`, res.data)
+      } catch (error) {
+        console.log(`error`, error.request)
+      }
       console.log(`data`, data)
       // clear form values (tried using e.target.reset(), but it doesn't update reactive form values)
       Object.keys(form).forEach((key, value) => (form[key] = ''))
