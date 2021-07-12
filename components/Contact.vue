@@ -189,8 +189,8 @@ export default {
             to: 'limelightdevs@gmail.com',
             from: 'limelightdevs@gmail.com',
             html: `
-            Hello from ${fullName}, I'd like to speak with you.
-            ${message}
+            Hello from ${data.fullName}, I'd like to speak with you.
+            ${data.message}
 
             My email is ${data.email} and number is ${data.phone || 'not sent.'}
             `,
