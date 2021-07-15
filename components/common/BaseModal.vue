@@ -1,43 +1,61 @@
 <template>
-  <transition name="modal-fade">
-    <div class="modal-backdrop z-30">
+  <div>
+    <overlay :is-open="isOpen" />
+    <transition name="scale">
       <div
-        class="modal bg-app-gray-1 rounded-md lg:w-5/6 p-3 h-full md:h-auto"
-        role="dialog"
-        aria-labelledby="modalTitle"
-        aria-describedby="modalDescription"
-        v-click-outside="onClickOutside"
+        v-if="isOpen"
+        class="fixed flex justify-center inset-0 items-center z-40"
       >
-        <header id="modalTitle" class="modal-header">
-          <button
-            type="button"
-            class="btn-close"
-            aria-label="Close modal"
-            @click="close"
-          >
-            x
-          </button>
-        </header>
-
-        <section id="modalDescription" class="modal-body">
-          <slot name="body"> This is the default body! </slot>
-        </section>
+        <div
+          v-click-outside="onClickOutside"
+          class="
+            modal
+            bg-app-gray-1
+            rounded-md
+            lg:w-5/6
+            p-3
+            h-full
+            md:h-[54%]
+            lg:h-2/5
+            xl:h-2/3
+          "
+          role="dialog"
+          aria-labelledby="modalTitle"
+          aria-describedby="modalDescription"
+        >
+          <header id="modalTitle" class="modal-header">
+            <button
+              type="button"
+              class="
+                btn-close
+                hover:text-red-600
+                duration-150
+                focus:text-red-600
+              "
+              aria-label="Close modal"
+              @click="close"
+            >
+              x
+            </button>
+          </header>
+          <section id="modalDescription" class="modal-body h-full">
+            <slot name="body"> This is the default body! </slot>
+          </section>
+        </div>
       </div>
-    </div>
-  </transition>
+    </transition>
+  </div>
 </template>
 
 <script>
+import Overlay from '../misc/Overlay.vue'
 export default {
   name: 'Modal',
-  computed: {
-    isModalVisible: {
-      get() {
-        return this.$store.state.works.isModalVisible
-      },
-      set(isModalVisible) {
-        this.$store.commit('works/setModalVisible', isModalVisible)
-      },
+  components: { Overlay },
+  props: {
+    isOpen: {
+      type: Boolean,
+      default: false,
     },
   },
   methods: {

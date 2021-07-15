@@ -76,4 +76,21 @@ html {
 /* .fade-leave-active below version 2.1.8 */ {
   opacity: 0;
 }
+.scale-enter-active,
+.scale-leave-active {
+  transition: all 0.2s;
+}
+.scale-enter, .scale-leave-to /* .fade-leave-active below version 2.1.8 */ {
+  transform: scale(0);
+}
+.appear-in {
+  animation: 0.5s appear;
+  margin: auto;
+}
+
+@keyframes appear {
+  0% {
+    opacity: 0;
+  }
+}
 </style>
