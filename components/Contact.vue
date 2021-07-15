@@ -76,6 +76,7 @@
           "
         >
           <v-generic-form
+            ref="formComp"
             :options="options"
             :fields="fields"
             hide-errors
@@ -112,11 +113,34 @@
 </template>
 
 <script>
-import { computed, reactive } from '@nuxtjs/composition-api'
+import {
+  computed,
+  reactive,
+  ref,
+  useContext,
+  watch,
+} from '@nuxtjs/composition-api'
 import SectionContainer from './common/SectionContainer.vue'
 export default {
   components: { SectionContainer },
   setup() {
+    const { store } = useContext()
+    const formComp = ref(null)
+    const contact = computed(() => store.state.contact)
+    watch(
+      () => contact.value,
+      ({ message, reason }) => {
+        formComp.value.setValue({
+          name: 'message',
+          payload: message,
+        })
+        formComp.value.setValue({
+          name: 'reason',
+          payload: reason,
+        })
+      },
+      { deep: true }
+    )
     const form = reactive({
       fullname: '',
       reason: '',
@@ -181,7 +205,26 @@ export default {
         },
       },
     ])
-    function submit(data) {
+    async function submit(data) {
+      try {
+        const res = await this.$axios.post(
+          `https://limelightdevs.herokuapp.com/email`,
+          {
+            to: 'limelightdevs@gmail.com',
+            from: 'limelightdevs@gmail.com',
+            html: `
+            Hello from ${data.fullName}, I'd like to speak with you.
+            ${data.message}
+
+            My email is ${data.email} and number is ${data.phone || 'not sent.'}
+            `,
+            subject: data.reason,
+          }
+        )
+        console.log(`res.data`, res.data)
+      } catch (error) {
+        console.log(`error`, error.request)
+      }
       console.log(`data`, data)
       // clear form values (tried using e.target.reset(), but it doesn't update reactive form values)
       Object.keys(form).forEach((key, value) => (form[key] = ''))
@@ -192,7 +235,7 @@ export default {
       divClasses: 'flex flex-col pb-4 lg:pb-0 w-full lg:w-1/2 lg:pr-4 mb-2',
       // parentClasses: 'flex flex-col pb-4 lg:pb-0 w-full lg:w-1/2 lg:pr-4',
     }
-    return { form, submit, fields, options }
+    return { form, submit, fields, options, formComp }
   },
 }
 </script>

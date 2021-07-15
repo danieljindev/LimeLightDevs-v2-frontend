@@ -55,8 +55,6 @@
                   </button>
                 </div>
               </div>
-
-              <!-- <div class="mt-20">
                 <a
                   href="/"
                   target="_blank"
