@@ -1,6 +1,8 @@
 <template>
   <div>
-    <div class="absolute right-0 top-28 w-7/12 md:w-5/12 lg:w-2/6">
+    <div
+      class="absolute right-0 top-28 hidden lg:block w-7/12 md:w-5/12 lg:w-2/6"
+    >
       <img
         class="block w-full h-full transform"
         src="/greenblob02.png"
@@ -12,7 +14,6 @@
         page-header
         text-white
         w-full
-        md:w-9/12
         lg:w-5/12
         flex flex-col
         items-center

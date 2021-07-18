@@ -15,8 +15,12 @@
         hidden
       "
     >
-      <div v-for="work in projects" :key="work.id" class="w-1/4">
-        <works-card :work="work" />
+      <div
+        v-for="work in projects"
+        :key="work.id"
+        class="w-1/2 lg:w-1/3 xl:w-1/4"
+      >
+      <works-card :work="work" />
       </div>
     </div>
   </section-container>

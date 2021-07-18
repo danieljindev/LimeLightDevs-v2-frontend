@@ -5,22 +5,8 @@
     :default-margins="false"
   >
     <div>
-      <div
-        class="
-          relative
-          font-bold
-          z-20
-          text-4xl
-          md:text-6xl
-          mb-7
-          px-4
-          md:px-0
-          text-left
-          md:text-left
-        "
-      >
-        Get in touch
-      </div>
+      <section-title text="Get In Touch" />
+
       <div
         class="
           relative
@@ -121,8 +107,9 @@ import {
   watch,
 } from '@nuxtjs/composition-api'
 import SectionContainer from './common/SectionContainer.vue'
+import SectionTitle from './common/SectionTitle.vue'
 export default {
-  components: { SectionContainer },
+  components: { SectionContainer, SectionTitle },
   setup() {
     const { store } = useContext()
     const formComp = ref(null)

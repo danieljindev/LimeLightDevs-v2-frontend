@@ -1,5 +1,5 @@
 <template>
-  <div class="w-full text-white flex mb-32 lg:mb-[24rem]">
+  <div class="w-full text-white flex mb-24 lg:mb-4 xl:mb-[24rem]">
     <img
       src="/greenblob01.png"
       class="absolute top-0 right-0 w-full lg:w-2/3 h-auto"
