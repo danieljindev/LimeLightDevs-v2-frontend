@@ -1,7 +1,7 @@
 <template>
   <div class="relative cursor-pointer h-56">
     <img
-      :src="work.media[0].url"
+      :src="work.cover.url"
       :alt="work.title"
       draggable="false"
       class="w-full h-full object-cover"
@@ -9,7 +9,6 @@
     />
     <div
       class="
-        bg-opacity-0
         hover:bg-opacity-75
         opacity-0
         hover:opacity-100
