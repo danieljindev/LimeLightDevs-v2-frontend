@@ -1,15 +1,14 @@
 <template>
-  <div class="relative cursor-pointer h-full">
+  <div class="relative cursor-pointer h-56">
     <img
-      :src="'/works/6.jpg'"
-      :alt="'/works/6.jpg'"
+      :src="work.cover.url"
+      :alt="work.title"
       draggable="false"
       class="w-full h-full object-cover"
       :class="{ 'rounded-lg': roundedStyle }"
     />
     <div
       class="
-        bg-opacity-0
         hover:bg-opacity-75
         opacity-0
         hover:opacity-100
