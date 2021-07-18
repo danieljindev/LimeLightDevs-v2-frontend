@@ -1,5 +1,17 @@
 <template>
-  <h3 class="mb-7 text-4xl font-semibold tracking-wide text-left md:text-5xl">
+  <h3
+    class="
+      mb-7
+      text-4xl
+      font-semibold
+      tracking-wide
+      text-left
+      md:text-5xl
+      relative
+      z-[3]
+      section-title
+    "
+  >
     <slot>{{ text }}</slot>
   </h3>
 </template>
@@ -15,4 +27,8 @@ export default {
 }
 </script>
 
-<style></style>
+<style>
+.section-title {
+  text-shadow: 0px 4px 50px rgba(0, 0, 0, 0.54);
+}
+</style>

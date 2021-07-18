@@ -5,7 +5,19 @@
       !isCarousel && isFirstItem ? 'rounded-l-2xl' : '',
       !isCarousel && isLastItem ? 'rounded-r-2xl' : '',
     ]"
-    class="w-3/12 bg-app-gray-2 flex flex-col text-center items-center justify-between px-8 2xl:px-10 py-8 shadow-2xl z-10"
+    class="
+      w-3/12
+      bg-app-gray-2
+      flex flex-col
+      text-center
+      items-center
+      justify-between
+      px-8
+      2xl:px-10
+      py-8
+      shadow-2xl
+      z-10
+    "
   >
     <img class="mb-6 mx-auto" src="/packages/desktop.png" alt="desktop.png" />
     <h1 class="font-bold text-2xl mb-2">{{ service.title }}</h1>

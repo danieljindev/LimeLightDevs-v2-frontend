@@ -2,8 +2,17 @@
   <!-- overflow hidden is required for blobs -->
   <div class="lg:overflow-x-hidden">
     <Hero />
-    <WorksComponent />
-    <Packages />
+    <div class="relative">
+      <Packages />
+      <div class="absolute hidden lg:block top-[-170px]">
+        <img
+          src="/works/greenblobstretch.png"
+          class="h-[79rem] 2xl:w-[61rem]"
+          alt=""
+        />
+      </div>
+      <WorksComponent />
+    </div>
     <OurProcess />
   </div>
 </template>
