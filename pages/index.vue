@@ -4,7 +4,7 @@
     <Hero />
     <div class="relative">
       <Packages />
-      <div class="absolute top-[-170px]">
+      <div class="absolute hidden lg:block top-[-170px]">
         <img
           src="/works/greenblobstretch.png"
           class="h-[79rem] 2xl:w-[61rem]"

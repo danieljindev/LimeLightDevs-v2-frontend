@@ -1,5 +1,5 @@
 <template>
-  <section-container :default-margins="false">
+  <section-container class="relative z-[3]" :default-margins="false">
     <div class="md:flex flex-wrap justify-between items-center">
       <section-title text="Our Packages" />
 
