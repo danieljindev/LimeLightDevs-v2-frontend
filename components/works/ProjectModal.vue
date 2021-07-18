@@ -113,12 +113,13 @@
           <!-- band aid fix for issue with initial load of modal -->
           <VueSlickCarousel v-bind="settings">
             <div
-              v-for="(image, index) in [1, 2, 3]"
-              :key="index"
+              v-for="media in project.media"
+              :key="media.url"
               class="relative px-3 py-2 focus:outline-none appear-in"
             >
               <img
-                src="http://placeimg.com/640/480/people"
+                :src="media.url"
+                :alt="project.title"
                 class="object-cover rounded-xl h-70 mx-auto"
                 draggable="false"
               />
