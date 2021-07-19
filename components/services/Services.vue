@@ -29,16 +29,16 @@ export default {
     // wasn't sure if there we gonna be more of the service items eventually added, but implemented so there could be more anyways
     const serviceItems = [
       {
-        title: 'Mobile App',
+        title: 'Mobile App Development',
         description:
-          'Lorem ipsum dolor sit amet consectetur adipiscing elit, fames semper vehicula velit dapibus in iaculis. Eros cursus lobortis leo hendrerit faucibus parturient sagittis justo curabitur lacinia ridiculus class. Lorem ipsum dolor Sit amet consectetur adipiscing Semper vehicula velit dapibus Leo hendrerit faucibus parturient',
+          "With the growing digital landscape dominated by smartphones, we understand your need to revitalize your digital business to the modern audience. Every company can use the benefit of a native app, regardless of the sector and their size, and that's where we come in. Experts in both iOS and Android app development- we craft meticulous and immersive apps that your users would love to engage with. We build effective native apps for every customizable operating system meeting industry standards and optimized to their maximum potential.",
         imageUrl: '/phones01.png',
         imageLeftSide: false,
       },
       {
-        title: 'Web',
+        title: 'Web Development',
         description:
-          'Lorem ipsum dolor sit amet consectetur adipiscing elit, fames semper vehicula velit dapibus in iaculis. Eros cursus lobortis leo hendrerit faucibus parturient sagittis justo curabitur lacinia ridiculus class. Lorem ipsum dolor Sit amet consectetur adipiscing Semper vehicula velit dapibus Leo hendrerit faucibus parturient',
+          "Make your presence felt online with robust, powerful, seamless, and sleek scalable web solutions. Whether it's an easy-to-use pop-up site for your business, a conversion-driven eCommerce solution, an eye-catching marketing face of your brand online, or a hassle-free website for your employers to navigate around-your website is an extension of your brand and we deliver upon just that with no compromise on quality.",
         imageUrl: '/unboggled01.png',
         imageLeftSide: true,
       },

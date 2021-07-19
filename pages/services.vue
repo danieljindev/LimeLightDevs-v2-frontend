@@ -19,7 +19,7 @@ export default {
     return {
       pageTitle: 'Services',
       description:
-        'Lorem ipsum dolor sit amet consectetur adipiscing elit, fames semper vehicula velit dapibus in iaculis. Eros cursus lobortis leo hendrerit faucibus parturient sagittis justo curabitur lacinia ridiculus class.',
+        'We understand what separates a great enterprise from a merely acceptable one. We offer a plethora of digital tailor-made solutions to empower your business with means to meet both your short-term and long-term goals. Visually engaging software for every business and seamless integration with your entire ecosystem. Team of competent experts in design and development.',
       link: '/packages',
       linkTitle: 'Check our packages',
     }

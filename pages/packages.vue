@@ -19,7 +19,7 @@ export default {
     return {
       pageTitle: 'Our Packages',
       description:
-        'Lorem ipsum dolor sit amet consectetur adipiscing elit, fames semper vehicula velit dapibus in iaculis. Eros cursus lobortis leo hendrerit faucibus parturient sagittis justo curabitur lacinia ridiculus class.',
+        'We believe in bringing structure and competence to your business with no red tape and deliver custom solutions designed to fit both your needs and budget. Choose from our wide range of packages especially crafted keeping every type of business in mind.',
       link: '/packages',
       linkTitle: 'Check our packages',
     }

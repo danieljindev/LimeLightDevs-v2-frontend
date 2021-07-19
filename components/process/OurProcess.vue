@@ -24,8 +24,8 @@
         <process-point
           class="mt-48 transform"
           src="/processes/wireframes.png"
-          body="App pagesLorem ipsum dolor sit amet consectetur adipiscing."
-          subhead="Wireframes & Designs"
+          body="We study your industry, your market, your competitors and your customers to formulate the best strategies weighing both pros and cons. We do not only meet the expectations but exceed them with a considerable margin."
+          subhead="Research & Strategize"
         />
         <left-dotted-line
           class="
@@ -48,8 +48,9 @@
             xl:-translate-x-8 xl:-translate-y-6
           "
           src="/processes/development.png"
-          body="App pagesLorem ipsum dolor sit amet consectetur adipiscing."
-          subhead="Development"
+          body="Whether it's a mobile app, a website, or software - careful meticulous consideration goes into every step where we carefully craft flawless designs and seamless operations. We refine, test, and re-test the prototypes until we have the perfect product for you.
+"
+          subhead="Design & Develop"
         />
         <right-dotted-line
           class="
@@ -76,8 +77,8 @@
             2xl:translate-y-4
           "
           src="/processes/launch.png"
-          body="App pagesLorem ipsum dolor sit amet consectetur adipiscing."
-          subhead="Launch!"
+          body="Your product is ready to launch and we are happy to guide you not only through every step of the process but beyond that. Our relationship with our customers isn't limited to just an agency, but we are your partners who understand your business needs."
+          subhead="Launch & Amplify!"
         />
       </div>
     </section-container>
@@ -90,20 +91,21 @@
       <dotted-line />
       <ProcessPoint
         src="/processes/wireframes.png"
-        body="App pagesLorem ipsum dolor sit amet consectetur adipiscing elit, fames semper vehicula."
-        subhead="Wireframes & Designs"
+        body="We study your industry, your market, your competitors and your customers to formulate the best strategies weighing both pros and cons. We do not only meet the expectations but exceed them with a considerable margin."
+        subhead="Research & Strategize"
       />
       <ProcessPoint
         class="mt-16"
         src="/processes/development.png"
-        body="App pagesLorem ipsum dolor sit amet consectetur adipiscing elit, fames semper vehicula."
-        subhead="Development"
+        body="Whether it's a mobile app, a website, or software - careful meticulous consideration goes into every step where we carefully craft flawless designs and seamless operations. We refine, test, and re-test the prototypes until we have the perfect product for you.
+"
+        subhead="Design & Develop"
       />
       <ProcessPoint
         class="mt-16"
         src="/processes/launch.png"
-        body="App pagesLorem ipsum dolor sit amet consectetur adipiscing elit, fames semper vehicula."
-        subhead="Launch"
+        body="Your product is ready to launch and we are happy to guide you not only through every step of the process but beyond that. Our relationship with our customers isn't limited to just an agency, but we are your partners who understand your business needs."
+        subhead="Launch & Amplify"
       />
     </section-container>
   </div>

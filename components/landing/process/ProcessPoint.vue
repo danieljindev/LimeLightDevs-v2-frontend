@@ -2,7 +2,15 @@
   <div class="flex items-center lg:flex-col relative z-20">
     <div class="flex justify-center">
       <div
-        class="rounded-full h-24 w-24 bg-app-gray-2 flex items-center justify-center"
+        class="
+          rounded-full
+          h-24
+          w-24
+          bg-app-gray-2
+          flex
+          items-center
+          justify-center
+        "
       >
         <img class="w-20" :src="src" alt="" />
       </div>

@@ -40,12 +40,15 @@
       >
       <span
         class="text-2xl sm:text-3xl font-hibana text-app-green-1 mb-4 lg:mb-8"
-        >Limelight - Web Developing</span
+        >Limelight - Software Development</span
       >
       <p class="text-md lg:text-lg w-5/6 mb-8 text-center lg:text-left">
-        Lorem ipsum dolor sit amet consectetur adipiscing elit, fames semper
-        vehicula velit dapibus in iaculis. Eros cursus lobortis leo hendrerit
-        faucibus parturient sagittis justo curabitur lacinia ridiculus class.
+        Extend your empire beyond borders. Leverage the power of next-gen
+        digital innovation and scale your ventures to new heights. We at
+        Limelight devs, cut to the heart of your software needs, and empower
+        your organization with the means to transform your bold ideas into great
+        success stories. Whatever your custom software requirements are - we've
+        got you covered.
       </p>
       <a
         href="#contact"
